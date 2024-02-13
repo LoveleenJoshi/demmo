@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online bakery-cakes,bread at your door step</title>
+     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+     <style>
+        body{
+            background-size: cover;
+        }
+        header{
+        display: flex;
+          justify-content: space-between;
+          background-color: rgba(206, 127, 24, 0.7);  
+          color: aliceblue;
+          font-family: inter;
+          font-size: 20px;
+          padding: 28px;
+          
+            
+        }
+        .header-title{
+            font-family: brushscriptmt;
+            font-size: 32px;
+
+        }
+        span{
+            padding-left: 12px;
+        }
+        article{
+            text-align: center;
+            padding: 20px;
+            background-color: #af9656;
+            font-size: 20px;
+            color: white;
+            
+        }
+        .bi-lightning-fill{
+            color: brown;
+        }
+        .shade{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding-top: 40px;
+            background-color: rgba(0,0,0,0.6);
+            height: 400px;
+            width: 100%;
+        }
+        .title{
+            font-size: 40px;
+            font-weight: bold;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+        .sub-title{
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+        .registration{
+            font-size: 22px;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+        .Email{
+            width: 400px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.6);
+            border-radius: 8px;
+            text-align: center;
+            color: black;
+            padding: 6px;
+            margin-top: 12px;
+        }
+        .controls{
+            display: flex;
+            align-items: center;
+        }
+        .button{
+            width: 200px;
+            height: 40px;
+            background-color: rgba(188, 75, 5, 0.962);
+            border-radius: 8px;
+            text-align: center;
+            color: black;
+            padding: 6px;
+            margin-top: 12px;
+            margin-left: 12px;
+
+        }
+        footer{
+            background-color: aquamarine;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            font-family: inter;
+             font-size: 14px;
+             padding: 20px;
+        }
+        .left-pannel{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .right-pannel{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            border-left: 2px solid gray;
+        
+            padding-left: 20px;
+
+        }
+        .footer-title{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            }
+
+        .footer-title~div{
+            margin-bottom: 12px;
+        }
+        aside{
+            position: fixed;
+            right: 20px;
+            bottom: 12px;
+            background-color: rgb(224, 140, 37);
+            padding: 10px;
+            font-size: 24px;
+            color: aliceblue;
+            width: 44px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        aside div{
+            margin-bottom: 6px;
+            background-color: rgba(75, 63, 46,0.5);
+            border-radius: 80px;
+            background-color: rgb(28, 44, 63);
+            padding: 6px;
+            text-align: center;
+            width: 40px;
+            transition: 2s;
+            
+            
+            padding: 4px;
+        }
+        aside div:hover{
+            color: bisque;
+            cursor: grab;
+            background-color: rgb(8, 8, 122);
+            transition: 2s;
+            font-size: 28px;
+        }
+        nav{
+            height: 380px;
+            width: 260px;
+            background-color: rgb(248, 234, 215);
+            color: rgb(39, 37, 37);
+            font-size: 20px;
+            padding: 20px;
+            overflow: auto;
+            border: black 2px solid;
+            display: flex;
+            
+         }
+         nav div{
+            width: 200px;
+            text-align: center;
+            border: #fec748 2px solid;
+            
+            background-color: rgb(254, 204, 144);
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            margin-left:8px ;
+            
+            border-radius: 8px;
+            
+         }
+        
+     </style>
+        
+ </head>
+<body background="assets/bakeryimages.jpeg"></body>
+
+    <header>
+        <div>
+            <span class="header-title">Baker's point</span>
+        </div>
+        <div>
+            
+                
+        </div>
+         <div>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+         </div>
+    
+      </header>
+      <article>
+        <span class="bi bi-lightning-fill"></span>
+        <span>Celebrate Every Moments With Us</span>
+        <span class="bi bi-lightning-fill"></span>
+      </article>
+      <div class="shade">
+      <main>
+        <div class="title">Exciting Offers are Available</div>
+        <div class="sub-title">Order From Anywhere and Anytime</div>
+        <div class="registration">
+            <div class="reg-title">Enter Your Email that We can Reach</div>
+            <div class="controls">
+                <div class="Email"> Enter Your Email address</div>
+                <div class="button">Get started</div>
+            </div>
+        </div>
+    </div>
+      </main>
+      <aside>
+        <div class="bi bi-facebook"></div>
+        <div class="bi bi-instagram"></div>
+        <div class="bi bi-twitter"></div>
+        <div class=" bi bi- bi-youtube"></div>
+        <div class="bi bi-linkedin"></div>
+      </aside>
+      <footer>
+        <div class="left-pannel">
+            <div>
+            <div class="footer-title">ABOUT</div>
+                <div>Contact Us</div>
+                <div>About Us</div>
+                <div>Careers</div>
+                <div>Flipkart Stories</div></div>
+            <div>
+             <div class="footer-title">HELP</div>
+             
+             <div>Payments</div>
+             <div>Shipping</div>
+             <div>Cancellation & Returns</div>
+             <div>FAQ</div></div>
+
+
+            <div>
+            <div class="footer-title">CONSUMER POLICY</div>
+                <div>Return Policy</div>
+                <div>Terms Of Use</div>
+                <div>Security</div>
+                <div>xPrivacy</div>
+                <div>Sitemap</div>
+                <div>Grievance Redressal</div>
+                <div>EPR Compliance</div></div>
+             <div>             
+            <div class="footer-title">SOCIAL</div>
+                <div>Facebook</div>
+                <div>Twitter</div>
+               <div> YouTube</div></div>   
+
+            </div>
+        <div class="right-pannel">
+            <div>
+            <div class="footer-title">Mail Us:</div>
+                <div>Flipkart Internet Private Limited,
+                </div>
+                <div>Buildings Alyssa, Begonia &</div>
+                <div>Clove Embassy Tech Village,</div></div>
+               <div> <div class="footer-title">Registered Office Address:</div>
+                    <div>Flipkart Internet Private Limited,</div>
+                    
+                   <div> Buildings Alyssa, Begonia &</div></div>
+                
+        </div>
+      </footer>
+
+
+
+    
+</body>
+</html>

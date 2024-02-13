@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "Realme Gold",
+        "Price": 12000.70,
+        "Photo": "../public/assets/adv1.jpg"
+    },
+    {
+        "Name": "Realme Aqua Green",
+        "Price": 10000.10,
+        "Photo": "../public/assets/mobile-green.jpg"
+    },
+    {
+        "Name": "Fashion Wear",
+        "Price": 1000,
+        "Photo": "../public/assets/adv2.jpg"
+    }
+]

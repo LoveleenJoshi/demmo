@@ -1,0 +1,15 @@
+table{
+    font-family: Arial;
+    font-weight: bold;
+}
+
+
+
+tr:nth-child(even)
+{
+    background-color: aqua;
+}
+tr:nth-child(odd)
+{
+    background-color: aqua;
+}

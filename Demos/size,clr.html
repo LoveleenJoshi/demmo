@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move Photo</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var fee = 0;
+        function submitClick() {
+            document.getElementById("list").innerHTML = "";
+            fee = 0;
+
+            var checkboxname = document.getElementsByName("category");
+            for (var checkbox of checkboxname) {
+                if (checkbox.checked) {
+                    document.getElementById("list").innerHTML += checkbox.value + "<br>";
+                    fee += parseInt(checkbox.id);
+                    document.getElementById("fee").innerHTML = fee;
+                }
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <ul class="list-unstyled">
+        <li class="ms-4"><input type="checkbox" name="category" value="Electronics" id="2500">Electronics-2500</li>
+        <li class="ms-4"><input type="checkbox" name="category" value="Jewelery" id="3500">Jewelery-3500</li>
+        <li class="ms-4"><input type="checkbox" name="category" value="Fashion" id="4500">Fashion-4500</li>
+        <li class="ms-4"><input type="checkbox" name="category" value="Footwear" id="5500">Footwear-5500</li>
+
+    </ul>
+    <button class="btn btn-primary ms-4" onclick="submitClick()">Submit</button>
+    <p id="list"></p>
+    <p id="fee"></p>
+
+
+</body>
+
+</html>

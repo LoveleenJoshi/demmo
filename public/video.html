@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        input+span{
+            display: none;
+        }
+       input:required+span{
+        display: inline;
+        color: red;
+        font-size: 20px;
+       }
+       input:required{
+        border: 2px solid rgb(1, 1, 102);
+        box-shadow: 2px 2px 4px green;
+       }
+      #age:out-of-range+span{
+        display: block;
+        color: red;
+
+      }
+      #age:in-range+span{
+      display: none;
+      }
+      
+       
+       
+    
+       
+    </style>
+</head>
+<body>
+<dl>
+    <dt>User Name:</dt>
+    <dd>
+        <input type="text" id="username" required>
+       <span>*</span>
+    </dd>
+    <dt>Age:</dt>
+    <dd>
+        <input type="number" min="15" max="50" id="age"><span>Age Must be 15 to 50.</span>
+    </dd>
+    <dt>Mobile:</dt>
+    <dd>
+        <input type="text" id="phone " pattern="\+91\d{10}">
+        <span>Mobile no. should be</span>
+    </dd>
+</dl>
+
+ 
+   
+    </body>
+</html>

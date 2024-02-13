@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading animation</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background-color: rgb(255, 200, 133);
+        }
+      @keyframes Circle-Effect{
+        from{
+            font-size:24px;
+            color: aliceblue;
+            opacity: 1;
+
+        }
+        to{
+            font-size:200px;
+            color: aliceblue;
+            opacity: 0.2;
+        }
+      }
+      #circle{
+        animation-name: Circle-Effect;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="circle" class="bi bi-circle"></div>
+    </div>
+    
+</body>
+</html>

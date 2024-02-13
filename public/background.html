@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>websitefor expermenting background</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+   body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    
+   }
+   
+  
+
+    </style>
+   
+</head>
+<body >
+ <form class="p-4 border border-3 rounded  rounded-3 border-dark" >
+    
+
+  <h3 ><img src="assets/avatar1.jpg" width="50" height="50" class=" me-2 rounded rounded-circle">Register User</h3>
+ <div class="mb-3  ">
+    
+    <label for="username" class="form-label">User Name</label>
+    <div class="input-group">
+        <span  class="bi bi-person input-group-text"></span>
+        <input type="text"  class="form-control" name="username">
+        <span  class="bi bi-check-circle input-group-text"></span>
+    </div>
+    <div class=" mt-1 text-danger">
+        User Name required
+    </div>
+</div>
+
+    <div class="mb-2">
+        <label for="password" class="form-label">password</label>
+        <div>
+            <input type="password" class="form-control" name="password">
+        </div>
+    </div>
+
+        <div class="mb-2">
+            <label for="city" class="form-label" >Your City</label>
+         <div>
+            <select name="city" class="form-select">
+                <option>Choose City</option>
+                <option> Delhi</option>
+                <option>Hyderabad</option>
+            </select>
+         </div>
+            
+            </div>
+            <div class="mb-2">
+                <label for="price" class="form-label">Select Price</label>
+                <div>
+                    <input type="range" min="1" max="100" value="40" name="price" class="form-range">
+                </div>
+            </div>
+
+
+         <div class="mb-2">
+            <label for="subscribe" class="form-label">Subscribe</label>
+            <div class="form-switch">
+                <input type="checkbox" class="form-check-input"  name="subscribe">
+                <label class="form-check-label ms-1">Yes</label>
+            </div>
+         </div>
+     <div class="mb-2" >
+        <button class="btn btn-success w-100">Register</button>
+        
+        
+     </div>
+
+     <div class="mt-2">
+     <button class="btn btn-link w-100">Existing User?Login</button>
+    </div>
+
+ </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-Object</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function bodyload() {
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=BNstyVbWNpyNtFca5Fm6dDYrcwn93mVx0nkoydsM")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (products) {
+                    products.photos.map(function (product) {
+                        var card = document.createElement("div");
+                        card.className = "card m-3 p-3 card-yellow";
+                        card.style.width = "300px";
+                        card.innerHTML = `
+                        <img src="${product.img_src}" height="200" class="card-img-top">
+                        <div class="card-header card-title fw-bold" style="font-size:20px;">
+                       ${product.id}
+                        </div>
+                       <div class="card-body">
+                        <dl>
+                            <dt>Camera Name</dt>
+                                <dd>${product.camera.full_name}</dd>
+                            <dt>Rover Name</dt>
+                            <dd>${product.rover.name}</dd>
+                            </dl>
+                            </div>
+                    `;
+                        document.querySelector("main").appendChild(card);
+                    })
+                })
+        }
+
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <h2>
+        NaSa-Mars Details
+    </h2>
+    <main class="d-flex flex-wrap">
+
+    </main>
+
+</body>
+
+</html>

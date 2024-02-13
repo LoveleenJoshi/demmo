@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background-color: rgb(253, 183, 90);
+        }
+        @keyframes circle-rotation{
+            from{
+               
+                opacity: 0.4;
+                transform: rotatey(0deg);
+                color:#000;
+            }
+            50%{
+                
+                opacity: 0.8;
+                transform: rotatey(0deg);
+                color:#000;
+            }
+            to{
+               
+                opacity: 1;
+                transform: rotatey(180deg);
+                color:#000;
+            }
+            
+        }
+        #circle1{
+            animation-name: circle-rotation ;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+           
+        }
+        #circle1,#circle2{
+            position: absolute;
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="circle1" class="bi bi-circle"></div>
+        <div id="circle2" class="bi bi-circle"></div>
+    </div>
+    
+</body>
+</html>

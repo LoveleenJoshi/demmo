@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #User+div{
+            display: none;
+        }
+        #User:invalid+div{
+            display: block;
+           color: red;
+        }
+        #Password+div{
+            display: none;
+        }
+        #Password:invalid+div{
+            display: block;
+            color: red;
+        }
+        #User:valid{
+            border:2px solid green;
+            box-shadow: 2px 2px 4px green;
+        }
+        #User:invalid{
+            border:2px solid rgb(228, 96, 26);
+            box-shadow: 2px 2px 4px rgb(233, 109, 37);
+        }
+        #terms:checked+span{
+            color: rgb(11, 171, 57);
+        }
+        #terms+span{
+            color: red;
+        }
+        #terms~button{
+            display: none;
+        }
+        #terms:checked~button{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>User Name:</dt>
+        <dd>
+            <input type="text" id="User" required>
+            <div>User Name Required.</div>
+        </dd>
+
+
+        <dt>Password:</dt>
+        <dd>
+            <input type="password" id="Password" pattern="\+91\d{10}">
+            <div>Enter +91 and 10 digits.</div>
+        </dd>
+
+        <dt>Terms And Conditions</dt>
+        <dd>
+            <textarea rows="4" cols="40" disabled> terms and conditions.....</textarea>
+        </dd>
+        <dd>
+            <input type="checkbox" id="terms"><span>I accept</span>
+            <button>Register</button>
+        </dd>
+    </dl>
+    
+</body>
+</html>

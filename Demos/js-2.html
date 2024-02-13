@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Verification</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        var regExp = / /;
+        function countrychange() {
+            var lstCountry = document.getElementById("lstCountry").value;
+            var countryError = document.getElementById("countryError");
+            var txtMobile = document.getElementById("txtMobile");
+            var Flag = document.getElementById("flag");
+
+
+            if (lstCountry == "India") {
+                countryError = "";
+                txtMobile.placeholder = "+91 and 10 Digits.";
+                regExp = /\+91\d{10}/;
+                Flag.src = "../public/assets/INDIA.jpg";
+            } else if (lstCountry == "USA") {
+                countryError = "";
+                txtMobile.placeholder = "(800) 555-0175";
+                regExp = /\(800\)\s\d{3}-\d{4}/;
+                Flag.src = "../public/assets/usa.jpg";
+            } else if (lstCountry == "UK") {
+                countryError = "";
+                txtMobile.placeholder = "(44)(20) 1234 5678";
+                regExp = /\(44\)\(\d{2}\)\s\(\d{4}\)\s\d{4}/;
+                Flag.src = "../public/assets/uk.jpg";
+            } else {
+                countryError = "Please Select Any country".fontcolor('red');
+                txtMobile.placeholder = "Please Select your Country";
+
+            }
+        }
+        function submitClick() {
+            var txtMobile = document.getElementById("txtMobile").value;
+            var mobileError = document.getElementById("mobileError");
+            if (txtMobile.match(regExp)) {
+                document.write("<h3>Mobile verified Successfully......<h3>");
+            } else {
+                mobileError.innerHTML = `Invaild Mobile Format: ${document.getElementById("txtMobile").placeholder}`;
+            }
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <h3>Verify Mobile Number</h3>
+    <dl class="w-25 mt-4">
+        <dt>Select Country</dt>
+        <dd class="input-group">
+            <select id="lstCountry" class="form-select" onchange="countrychange()">
+                <option>Select Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+            </select>
+            <img id="flag" class="input-group-text" width="80">
+        </dd>
+        <dd id="countryError"></dd>
+
+        <dt>Enter Mobile Number</dt>
+        <dd>
+            <input type="text" id="txtMobile" class="form-control">
+        </dd>
+        <p id="mobileError" class="mt-4 text-center text-center"></p>
+        <button class="btn btn-primary w-100" onclick="submitClick()">Submit</button>
+    </dl>
+
+</body>
+
+</html>

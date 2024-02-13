@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choices</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var userdetails =
+        {
+            Email: "john@gmail.com",
+            Mobile: "+919876543210",
+            Password: "John@123",
+        }
+        var flag = "";
+        function LoginClick() {
+            var UserEmail = document.getElementById("userEmail").value;
+            var Password = document.getElementById("password").value;
+            if (UserEmail === userdetails.Email) {
+                flag = `Login Success with Your ${UserEmail} - Activation Link is sent on your Email`;
+                document.write(flag)
+            } else if (UserEmail === userdetails.Mobile) {
+                flag = `Login Success with Your ${UserEmail} - Otp sent`;
+                document.write(flag)
+            }
+            else {
+                document.getElementById("error").innerHTML = "Invalid Email or Mobile Phone Number.".fontsize('red');
+            }
+        }
+    </script>
+    <style type="text/css">
+        body {
+            background-image: url("../public/assets/slide1.jpg");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 600px;">
+    <dl class="border border-2 border-light rounded rounded-2 m-2 p-4">
+        <dt class="mb-2">Email or Mobile Phone Number</dt>
+        <dd>
+            <input type="text" id="userEmail" class="form-control">
+        </dd>
+        <dt class="mb-2">Password</dt>
+        <dd>
+            <input type="password" id="password" class="form-control">
+        </dd>
+        <div id="error"></div>
+        <button class="btn btn-primary w-100 mt-4" onclick="LoginClick()">Login</button>
+    </dl>
+</body>
+
+</html>

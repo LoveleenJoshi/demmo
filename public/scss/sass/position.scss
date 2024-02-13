@@ -1,0 +1,9 @@
+$Padding:20px;
+
+@function setpadding()
+{
+    @return $Padding * 10;
+}
+td{
+    padding: setpadding() ;
+}

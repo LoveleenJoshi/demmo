@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    input+span{
+        display: none;
+    }
+    input:required+span{
+        color: brown;
+        font-size: 20px;
+        display: inline;
+        padding-left: 4px;
+    }
+    input:required{
+        border: 2px solid red;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 18px rgb(252, 181, 181);
+    }
+    #Age+div{
+        display: none;
+    }
+    #Age:out-of-range+div{
+        display: block;
+        width: 200px;
+        color: red;
+        font-size: 20px;
+    }
+    #Age:in-range+div{
+        display: none;
+    }
+   
+  </style>
+      
+
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name:</dt>
+            <dd>
+                <input type="text" required><span>*</span>
+            </dd>
+            <dt>Password:</dt>
+            <dd>
+                <input type="password" required><span>*</span>
+            </dd>
+            <dt>Age:</dt>
+            <dd>
+                <input type="number" id="Age" min="15" max="40"><div>Age must be between 15 to 50 years</div>
+            </dd>
+
+        </dl>
+        <button>Register</button>
+    </form>
+    
+</body>
+</html>

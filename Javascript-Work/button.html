@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_input Design</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+   
+    <script type="text/javascript">
+        function registerClick(){
+            document.getElementById("detailsContainer").style.display="block";
+            document.getElementById("inFo").style.display="none";
+            document.getElementById("lName").innerHTML=document.getElementById("txtName").value;
+            document.getElementById("lEmail").innerHTML=document.getElementById("txtEmail").value;
+            document.getElementById("lPassword").innerHTML=document.getElementById("txtPassword").value;
+
+        }
+        function signinClick(){
+            document.getElementById("signinContainer").style.display="none";
+            document.getElementById("inFo").style.display="block";
+        }
+        function cancelclick(){
+            document.getElementById("signinContainer").style.display="block";
+            Document.getElementById("info").style.display="none";
+        }
+    </script>
+ </head>
+ <body class="container-fluid ">
+
+    <div class="m-4 text-end" id="signinContainer">
+        <button class="btn btn-primary ps-4 pe-4" onclick="signinClick()">Sign-In</button>
+    </div>
+
+
+  <div class="w-50 border border-2 border-light rounded rounded-2 m-4 alert  alert-secondary alert-dismissible" id="inFo" style="display: none;">
+    <h3 class="m-2 p-2">  <img src="../public/assets/avatar1.jpg" class="rounded rounded-circle" width="50" height="50" class="p-4" >    Register user</h3>
+    <button class="btn-close" data-bs-dismiss="alert"></button>
+    <div class="m-4">
+       <label for="txtName" class="form-label"> User Name:</label>
+        <div>
+            <input type="text" id="txtName" class="form-control">
+        </div>
+    </div>
+
+    <div class="m-4">
+        <label for="txtEmail" class="form-label"> User Email:</label>
+         <div>
+             <input type="email" id="txtEmail" class="form-control">
+         </div>
+     </div>
+
+     <div class="m-4">
+        <label for="txtPassword" class="form-label"> User Password:</label>
+         <div>
+             <input type="password" id="txtPassword" class="form-control">
+         </div>
+     </div>
+
+  <div class="m-4 text-center">
+    <button class="btn btn-primary"  onclick="registerClick()">Register</button>
+    <button class="btn btn-danger" onclick="cancelclick()" data-bs-dismiss="alert" >Close</button>
+  </div>
+  </div>
+  
+
+  <div class="w-50" id="detailsContainer" class="bg-success p-2 rounded" style="display: none;">
+    <h3 class="bg-dark text-white text-center m-2 p-2">User Information</h3>
+    <dl class="row border border-dark ms-2 me-2">
+        <dt class="col-6 mt-3">Name</dt>
+        <dd id="lName" class="col-6 mt-3"></dd>
+
+        <dt class="col-6 mt-3">Email</dt>
+        <dd id="lEmail" class="col-6 mt-3"></dd>
+
+        <dt class="col-6 mt-3">Password</dt>
+        <dd id="lPassword" class="col-6 mt-3"></dd>
+    </dl>
+    <button class="btn btn-link "><a href="button.html">Back</a></button>
+  </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+ </body>
+ </html>

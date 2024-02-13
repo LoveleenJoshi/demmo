@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        form{
+            width: 380px;
+        }h1{
+    
+            font-size: 30px;
+            font-weight: 400;
+        }
+        a{
+            text-decoration: none;
+            
+            
+        }
+        a:hover{
+            color: brown;
+        } 
+        details{
+            font-size: 14px;
+            margin-bottom: 8px;
+            margin-top: 8px;
+        }
+        details div{
+            padding-left: 10px;
+            margin-bottom: 6px;
+        }
+        fieldset{
+            border: 2px solid rgb(176, 175, 175);
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+        }
+        legend{
+            width: auto;
+            float: none;
+            text-align: center;
+            padding: 6px;
+
+        }
+    </style>
+</head>
+<body>
+    <form class="border border-3 border-dark p-4 rounded" style="margin-top: 40px;">
+        <h1>
+            Sign in
+        </h1>
+        <div class="mb-4">
+            <label for="email" class="form-label">Email or Mobile Phone Number</label>
+            <input type="text" autofocus name="email" class="form-control">
+        </div>
+        <button class="btn btn-warning btn-sm w-100 mb-4">Continue</button>
+        <div style="font-size: 12px;">
+            By continuing, you agree to Amazon's <a href="#">Conditions of Use </a>and <a href="#">Privacy Notice.</a>
+        </div>
+        <details class="mb-2">
+            <summary><a href="#">Need Help?</a></summary>
+            <div><a href="#">Forgot Your Password?</a></div>
+            <div><a href="#">other issues with sign-in</a></div>
+        </details>
+
+    </form>
+    <fieldset style="margin-top: 16px; margin-bottom: 20px; ">
+        <legend style="font-size: 14px; color: rgb(135, 134, 134);">
+            New To Amazon?
+        </legend>
+        <button class="w-100 rounded " style="color: rgb(46, 46, 46); font-size: 14px;">Create Your Amazon account</button>
+    </fieldset>
+
+    
+</body>
+</html>

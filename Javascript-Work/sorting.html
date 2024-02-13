@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        var cities=["Delhi" , "Mumbai" ,"Chennai" , "Jaipur"];
+        function loadCities(){
+            document.querySelector("ul").innerHTML = " ";
+            cities.map(function(city)
+            {
+               
+                var li=document.createElement("li");
+                li.innerHTML=city;
+                document.querySelector('ul').appendChild(li);
+            })
+        }
+        function bodyload(){
+            loadCities();
+        }
+        function btnclick(){
+            cities.sort();
+            loadCities();
+        }
+        function BTNclick(){
+            cities.sort();
+            cities.reverse();
+            loadCities();
+        }
+        function addClick(){
+            var city=document.getElementById("txtCity").value;
+            cities.push(city);
+            loadCities();
+            document.getElementById("txtCity").value="";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+
+    <div>
+        <input type="text" id="txtCity"><button onclick="addClick()">Add</button>
+    </div>
+    <br>
+    <button onclick="btnclick()">
+        <span class="bi bi-sort-alpha-up"></span>
+    </button>
+    <button onclick="BTNclick()">
+        <span class="bi bi-sort-alpha-down"></span>
+    </button>
+    <ul>
+
+    </ul>
+</body>
+</html>

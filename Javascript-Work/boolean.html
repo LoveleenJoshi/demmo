@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function btnClick() {
+            var Btn=document.getElementById("btn");
+            var Bg=document.getElementById("bg");
+            Btn.innerHTML=(Btn.innerHTML=="Login")?"Cancel":"Login";
+            Btn.className=(Btn.className=="btn btn-danger w-25 mt-4")?"btn btn-primary w-25 mt-4":"btn btn-danger w-25 mt-4";
+            Bg.className=(Btn.innerHTML=="Cancel")?"bg-danger":"bg-primary";
+            
+            
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="bg-primary w-100" style="height: 500px;" id="bg"></div>
+ <button class="btn btn-primary mt-4 w-25" id="btn" onclick="btnClick()">Login</button>
+</body>
+</html>
+        

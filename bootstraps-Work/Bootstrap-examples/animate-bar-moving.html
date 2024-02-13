@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            background-color: rgb(37, 37, 37);
+        }
+        @keyframes animate1{
+            from{
+                opacity: 0.2;
+                height: 100px;
+                width: 60px;
+            }
+            to{
+                opacity: 0.5;
+                height: 200px;
+                width: 60px;
+            }
+        }
+        .bar1{
+            animation-name: animate1;
+            animation-iteration-count: infinite;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-in-out;
+
+        }
+        @keyframes animate2{
+            from{
+                opacity: 0.2;
+                height: 100px;
+                width: 60px;
+            }
+            to{
+                opacity: 0.6;
+                height: 200px;
+                width: 60px;
+            }
+        }
+        .bar2{
+            animation-name: animate2;
+            animation-iteration-count: infinite;
+            animation-duration: 0.9s;
+            animation-timing-function: ease-in-out;
+
+        }
+        @keyframes animate3{
+            from{
+                opacity: 0.2;
+                height: 100px;
+                width: 60px;
+            }
+            to{
+                opacity: 0.7;
+                height: 200px;
+                width: 60px;
+            }
+        }
+        .bar3{
+            animation-name: animate3;
+            animation-iteration-count: infinite;
+            animation-duration:1.2s;
+            animation-timing-function: ease-in-out;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="bar1" style="background-color: white; height:100px; width:60px; margin-right: 20px;">
+
+    </div>
+    <div class="bar2" style="background-color: white; height:100px; width:60px;  margin-right: 20px;">
+
+    </div>
+    <div class="bar3" style="background-color: white; height:100px; width:60px;  margin-right: 20px;">
+
+    </div>
+</body>
+</html>

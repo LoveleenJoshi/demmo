@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forward Jump</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body {
+            background-image: url("../public/assets/slide1.jpg");
+            background-size: cover;
+        }
+    </style>
+    <script type="text/javascript">
+        var CardDetails = {
+            card: "4444555566667890",
+            Cvv: "3456",
+            expiry: "2024"
+        }
+        function verifyCard() {
+            var Card = document.getElementById("card").value;
+            if (Card === CardDetails.card) {
+                document.getElementById("cvvContainer").style.display = "block";
+                document.getElementById("error").innerHTML = "";
+            } else {
+                document.getElementById("error").innerHTML = "Inavalid card".fontcolor('red').bold();
+            }
+        }
+        function verifyCvv() {
+            var Cvv = document.getElementById("cvv").value;
+            if (Cvv === CardDetails.Cvv) {
+                document.getElementById("expirycontainer").style.display = "block";
+                document.getElementById("error").innerHTML = "";
+            } else {
+                document.getElementById("error").innerHTML = "Inavalid CVV".fontcolor('red').bold();
+            }
+        }
+        function verifyExpiry() {
+            var Expiry = document.getElementById("expiry").value;
+            if (Expiry === CardDetails.expiry) {
+                document.getElementById("btnPay").style.display = "block";
+                document.getElementById("error").innerHTML = "";
+            } else {
+                document.getElementById("error").innerHTML = "Inavalid Expiry".fontcolor('red').bold();
+            }
+        }
+
+    </script>
+</head>
+
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 800px;">
+    <dl class="border border-2 border-light rounded rounded-2 m-2 p-4">
+        <dt>Card Number</dt>
+        <dd>
+            <input type="text" class="form-control" id="card" onblur="verifyCard()">
+        </dd>
+
+        <div id="cvvContainer" style="display:none;">
+            <dt>CVV</dt>
+            <dd>
+                <input type="text" class="form-control" id="cvv" onblur="verifyCvv()">
+            </dd>
+        </div>
+
+
+        <div id="expirycontainer" style="display:none;">
+            <dt>Expiry</dt>
+            <dd>
+                <select id="expiry" class="form-select" onchange="verifyExpiry()">
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                </select>
+            </dd>
+        </div>
+
+
+        <button class="btn btn-primary w-100" id="btnPay" style="display:none;">Pay</button>
+        <p align="center" id="error"></p>
+    </dl>
+
+
+
+</body>
+
+</html>

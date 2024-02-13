@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyUser() {
+            var UserName = document.getElementById("username").value;
+            var UserError = document.getElementById("usererror");
+            fetch("../data/user.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (users) {
+                    for (var user of users) {
+                        if (user.Username === UserName) {
+                            UserError.innerHTML = "This name is already Occupies- Please try Another Name".fontcolor('red');
+                            break;
+                        } else {
+                            UserError.innerHTML = "NAme is Available".fontcolor('green');
+                        }
+                    }
+                })
+        }
+        function verifypass(e) {
+            var passError = document.getElementById("passerror");
+            if (e.keyCode >= 65 && e.keyCode <= 90) {
+                passError.style.display = "block";
+            } else {
+                passError.style.display = "none";
+            }
+        }
+
+    </script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <h3>Register User</h3>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" id="username" onkeyup="verifyUser()"></dd>
+        <dd id="usererror"></dd>
+        <dt>Password</dt>
+        <dd><input type="password" id="passw" onkeypress="verifypass(event)"></dd>
+        <dd id="passerror" style="color: goldenrod; display: none;">
+            <span class="bi bi-exclamation-triangle-fill"></span> warning: caps On!
+        </dd>
+    </dl>
+</body>
+
+</html>

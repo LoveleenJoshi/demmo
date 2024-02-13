@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Design</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid bg-dark">
+    <h2 class="text-center text-danger mt-2">Frequently Asked Questions</h2>
+    <div class="accordion mt-4" id="faqs">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button w-100 " data-bs-target="#q1" data-bs-toggle="collapse">What is Netflix?</button>
+            </div>
+            <div class="collapse accordion-collapse fade show"  id="q1"  data-bs-parent="#faqs">
+                <div class="accordion-body" >
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+                    </p>
+                    <p>
+                        You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+                    </p>
+                </div>
+            </div> 
+        </div>
+
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-target="#Q2" data-bs-toggle="collapse">How Much does Netflix Cost?</button>
+            </div>
+            <div class="collapse accordion-collapse fade"  id="Q2" data-bs-parent="#faqs"  >
+                
+                    <p>
+                        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.
+                    </p>
+               
+            </div>
+        </div>
+        
+
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

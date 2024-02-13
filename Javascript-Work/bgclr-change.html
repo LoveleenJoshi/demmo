@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script type="text/javascript">
+        function themeChange(){
+            var checkbox=document.getElementById("themebox");
+            var backGround=document.getElementById("form");
+            var btnClr=document.getElementById("btnclr");
+            if(checkbox.checked){
+                backGround.className="bg-dark text-white p-4 border border-2 border-light rounded rounded-2";
+                btnClr.className="bg-light w-100 text-dark mt-2";
+            }else{
+                backGround.className="bg-light p-4 border border-dark border-2 rounded rounded-2 ";
+                btnClr.className="bg-dark text-white w-100";
+            }
+        }
+        function loginclick(){
+             document.getElementById("body").className="bg-dark d-flex justify-content-center align-items-center text-white border border-white";
+             document.getElementById("backGround").className="bg-light border border-2 border-white";
+          
+        }
+   
+    </script>
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height: 600px;" id="body">
+    <div class="border border-2 border-dark p-4 rounded rounded-2" id="form">
+        <div class="mt-2 mb-2 form-switch text-end">
+            <input type="checkbox" Name="mode" value="dark" class="form-check-input" onchange="themeChange()" id="themebox">
+            <label> Dark Mode</label>
+
+        </div>
+     <h3 class="mt-3"><span class="bi bi-person-fill"></span>Register User</h3>
+        <dt class="mt-3">User Name</dt>
+        <dd>
+            <input type="text" class="form-control"></dd>
+        <dt class="mt-3"> Password</dt>
+        <dd>
+            <input type="password" class="form-control">
+        </dd>
+     </dl>
+         <button class="btn btn-dark text-light w-100 mt-2" id="btnclr" onclick="loginclick()">Login</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <button class="btn btn-dark mt-4" data-bs-target="#details" data-bs-toggle="modal"> <span class="bi bi-person-fill"></span>Login</button>
+    <div class="modal" id="details">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><span class="bi bi-person-fill"></span>Register User?</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>USER Name:</dt>
+                        <dd>
+                            <input type="text" placeholder="Enter your Name" class="form-control">
+                        </dd>
+                        <dt>Password:</dt>
+                        <dd>
+                            <input type="password" placeholder="Enter Your Password" class="form-control">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-info">Submit</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>  
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

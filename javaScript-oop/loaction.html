@@ -1,0 +1,18 @@
+<script>
+    document.write(`
+<h2>Client Location Details</h2>
+<dl>
+    <dt>Ip address</dt>
+    <dd>${location.host}</dd>
+    <dt>Port Number</dt>
+    <dd>${location.port}</dd>
+    <dt>Protocal</dt>
+    <dd>${(location.protocol == "http:") ? "You are using from live server" : "You are accessing from file system"}</dd>
+<dt>Pathname</dt>
+<dd>${location.pathname}</dd>
+<dt>URL</dt>
+<dd>${location.href}</dd>
+
+
+`)
+</script>

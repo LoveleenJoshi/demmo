@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmi Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function calculateclick() {
+            var h = parseFloat(document.getElementById("height").value);
+            var w = parseInt(document.getElementById("Weight").value);
+            var H = h * h;
+            var bmi = w / H;
+            document.getElementById("Bmi").value = Math.round(bmi);
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <div class="mt-4 alert alert-light w-25 m-2 p-2 border border-3 border-dark rounded">
+        <div class="m-4 p-4">
+            <h3>Bmi Calculator</h3>
+            <div class="row mt-4">
+                Enter Height:<input type="text" id="height" class="form-control" placeholder="In Meter">
+            </div>
+            <div class="row mt-4">
+                Enter Weight:<input type="text" id="Weight" class="form-control">
+            </div>
+            <div class="row mt-4">
+                Ypur Bmi:<input type="text" id="Bmi" class="form-control">
+            </div>
+            <div class="row mt-4">
+                Your Age:<input type="text" id="Age" class="form-control">
+            </div>
+            <div class="row mt-4">
+                <button class="btn btn-primary w-100" onclick="calculateclick()">Calculate</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

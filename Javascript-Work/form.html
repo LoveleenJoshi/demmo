@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script>
+      function register() {
+        document.getElementById("detailcontainer").style.display = "block";
+        document.getElementById("detailcontainers").style.display = "none";
+        document.getElementById("lusername").innerHTML =
+          document.getElementById("username").value;
+        document.getElementById("luseraddress").innerHTML =
+          document.getElementById("useraddress").value;
+        document.getElementById("luserpassword").innerHTML =
+          document.getElementById("userpassword").value;
+      }
+    </script>
+  </head>
+  <body
+    class="container-fluid d-flex justify-content-center align-items-center" style="height: 500px">
+    <div style="width: 300px; height: 400px" class="border border-2 border-dark p-4" id="detailcontainers" >
+      <h3>Registration user</h3>
+      <div class="mt-3">
+        User name
+        <div><input type="text" id="username" /></div>
+      </div>
+      <div class="mt-3">
+        user address
+        <div><input type="text" id="useraddress" /></div>
+      </div>
+      <div class="mt-3">
+        User password
+        <div><input type="text" id="userpassword" /></div>
+      </div>
+      <div class="mt-3">
+        <button onclick="register()">Register</button> <button>cancel</button>
+      </div>
+    </div>
+    <div
+      id="detailcontainer"
+      class="bg-primary text-white p-4 rounded rounded-4 w-50"
+      style="display: none"
+    >
+      <h3>user info</h3>
+      <dl class="row">
+        <dt class="col-6">user name</dt>
+        <dd class="col-6" id="lusername"></dd>
+        <dt class="col-6">useraddress</dt>
+        <dd class="col-6" id="luseraddress"></dd>
+        <dt class="col-6">userpassword</dt>
+        <dd class="col-6" id="luserpassword"></dd>
+      </dl>
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

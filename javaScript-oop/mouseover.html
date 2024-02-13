@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function loadimages(path) {
+            document.getElementById("preview").src = path;
+        }
+
+    </script>
+    <style>
+        nav img:hover {
+            border: 2px solid blue;
+
+        }
+
+        nav img {
+            border: 2px solid gray;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <section>
+        <nav>
+            <div>
+                <img onmouseover="loadimages(this.src)" class="p-1 me-2 mt-2  rounded" src="../public/assets/m1.jpg"
+                    width="80" height="100">
+            </div>
+            <div>
+                <img onmousedown="loadimages(this.src)" class="p-1 me-2 mt-2 rounded" src="../public/assets/m2.jpg"
+                    width="80" height="100">
+            </div>
+            <div>
+                <img onmouseover="loadimages(this.src)" class="p-1 me-2 mt-2 rounded" src="../public/assets/m3.jpg"
+                    width="80" height="100">
+            </div>
+            <div>
+                <img onmouseover="loadimages(this.src)" class="p-1 me-2 mt-2  rounded" src="../public/assets/m4.jpg"
+                    width="80" height="100">
+            </div>
+            <div>
+                <img onmouseover="loadimages(this.src)" class="p-1 me-2 mt-2  rounded" src="../public/assets/m5.jpg"
+                    width="80" height="100">
+            </div>
+
+        </nav>
+        <main>
+            <div>
+                <img id="preview" src="../public/assets/m1.jpg" width="400" height="600">
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>

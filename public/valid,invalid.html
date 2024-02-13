@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+       
+        #username:valid+div{
+            display: none;
+        }
+        input:valid{
+            border: green 2px solid;
+        }
+        #username:invalid+div{
+            display: block;
+            width: 180px;
+            color:red;
+        }
+        #Password:valid+div{
+            display: none;
+        }
+        input[type="password"]:valid{
+            border: rgb(29, 115, 229) 2px solid;
+        }
+        #Password:invalid+div{
+            display: block;
+            width: 180px;
+            color:red;
+        }
+        #terms:checked+span{
+            color: blue;
+        }
+        #terms:checked~button{
+            display: block;
+        }
+        #terms~button{
+            display: none;
+        }
+        textarea:read-only{
+            cursor: not-allowed;
+            background-color: rgb(246, 249, 252);
+            color: rgb(153, 153, 154);
+        }
+        button:disabled{
+            background-color: aqua;
+            cursor: not-allowed;
+        }
+        a:link{
+            color: rgb(255, 85, 0);
+            text-decoration: none;
+            font-size: 20px;
+        }
+        a:visited{
+            color: blueviolet;
+            font-size: 20px;
+        }
+        a:active{
+            color: rgb(93, 93, 93);
+            font-size: 20px;
+        }
+        #age+div{
+            display: none;
+        }
+        #age:focus+div{
+            display: block;
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>User Name:</dt>
+        <dd>
+            <input type="text" required id="username">
+            <div>username is required</div>
+        </dd>
+
+        <dt>Password:</dt>
+        <dd>
+            <input type="password" required id="Password" pattern="\+91\d{10}">
+            <div>
+                Password must be +91 and 10 digits only.
+            </div>
+        </dd>
+        <dt>
+            Terms and Conditions
+        </dt>
+        <dd>
+            <textarea readonly rows="4" cols="30">terms and conditions are agreed</textarea>
+        </dd>
+
+
+       <dd>
+        <input type="checkbox" id="terms"><span>I Accept.</span>
+        <button disabled>Register</button>
+       </dd>
+       <dt>
+        age
+       </dt>
+       <dd>
+        <input type="number" id="age" >
+        <div>Age must be between 15 to 50 years.</div>
+       </dd>
+    </dl>
+   <div>
+    <a href="./shopper-template.html">Shopper template</a>
+   </div>
+   
+    <div>
+        <a href="./form.html">Forms design</a>
+    </div>
+</body>
+</html>

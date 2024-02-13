@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function  VerifyOtp()
+        {
+            var OTP=document.getElementById("otp").value;
+            var OtpError=document.getElementById("otperror");
+            if(OTP.trim()=="12345"){
+                OtpError.innerHTML="";
+            }else{
+                OtpError.innerHTML="Invalid OTP".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body>
+   <dl>
+    <dt> Enter OTP:</dt>
+    <dd>
+        <input type="text" id="otp" onblur="VerifyOtp()">
+    </dd>
+    <dd id="otperror"></dd>
+   </dl>
+    
+</body>
+</html>

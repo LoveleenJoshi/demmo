@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Payment by Forward Jump</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script type="text/javascript">
+        var userDeatils = {
+            Email: "john123@gmail.com",
+            Name: "john",
+            Password: "12345@12345"
+        }
+        function continueClick() {
+            var userEmail = document.getElementById("useremail").value;
+            if (userDeatils.Email === userEmail) {
+                document.getElementById("passwordContainer").style.display = "block";
+                document.getElementById("emailContainer").style.display = "none";
+            }
+        }
+        function loginClick() {
+            var userpassword = document.getElementById("userpassword").value;
+            if (userDeatils.Password === userpassword) {
+                document.getElementById("passwordContainer").style.display = "none";
+                document.getElementById("successContainer").style.display = "block";
+                document.getElementById("img").src = "../public/assets/john.jpg";
+                document.getElementById("welcome").innerText = `Welcome! ${userDeatils.Name}`;
+                document.getElementById("title").style.display = "none";
+
+            }
+        }
+
+
+    </script>
+</head>
+
+<body class="container-fluid">
+    <div class="d-flex justify-content-center">
+        <div class="w-25 border border-3 border-opacity-25 border-dark rounded p-4 m-4">
+            <div>
+                <h3 id="title">Sign In</h3>
+                <div id="emailContainer">
+                    <label class="form-label">Your Email</label>
+                    <div>
+                        <input type="text" class="form-control" id="useremail">
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-warning bg-warning bg-gradient w-100"
+                            onclick="continueClick()">Continue</button>
+                    </div>
+                </div>
+
+                <div id="passwordContainer" style="display: none;">
+                    <label class="form-label">Your Password</label>
+                    <div>
+                        <input type="password" class="form-control" id="userpassword">
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-warning bg-warning bg-gradient w-100"
+                            onclick="loginClick()">Login</button>
+                    </div>
+                </div>
+
+                <div id="successContainer" style="display: none;" class="d-flex">
+
+                    <span> <img id="img" width="50" height="50" class="rounded rounded-circle me-xxl-4" align="center"
+                            valign="center"></span>
+                    <span>
+                        <h3 id="welcome"></h3>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

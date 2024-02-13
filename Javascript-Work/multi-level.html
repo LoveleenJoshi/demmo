@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-level Statements</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body {
+            background-image: url("../public/assets/slide1.jpg");
+            background-size: cover;
+        }
+    </style>
+    <script type="text/javascript">
+        var CardDetails = {
+            card: "4444555566667890",
+            Cvv: "3456",
+            expiry: "2024"
+        }
+        function payclick() {
+            var Card = document.getElementById("card").value;
+            var Cvv = document.getElementById("cvv").value;
+            var Expiry = document.getElementById("expiry").value;
+            var Error = document.getElementById("error");
+            if (Card === CardDetails.card) {
+                if (Cvv === CardDetails.Cvv) {
+                    if (Expiry === CardDetails.expiry) {
+                        Error.innerHTML = `Card Is Verified <span class="bi bi-circle-tick"></span> Payment Successfull`.fontcolor('green').bold().toUpperCase();
+                    } else {
+                        Error.innerHTML = "Please Verify Your Card Expiry Year".fontcolor('red').bold().toUpperCase();
+                    }
+
+                } else {
+                    Error.innerHTML = "Please Verify Your Card Cvv".fontcolor('red').bold().toUpperCase();
+                }
+
+            } else {
+                Error.innerHTML = "Please Verify Your Card".fontcolor('red').bold().toUpperCase();
+            }
+        }
+
+    </script>
+</head>
+
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 700px;">
+    <dl class="border border-2 border-light rounded rounded-2 m-2 p-4">
+        <dt>Card Number</dt>
+        <dd>
+            <input type="text" class="form-control" id="card">
+        </dd>
+
+        <div id="cvvContainer">
+            <dt>CVV</dt>
+            <dd>
+                <input type="text" class="form-control" id="cvv">
+            </dd>
+        </div>
+
+
+        <div id="expirycontainer">
+            <dt>Expiry</dt>
+            <dd>
+                <select id="expiry" class="form-select">
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                </select>
+            </dd>
+        </div>
+
+
+        <button class="btn btn-primary w-100" id="btnPay" onclick="payclick()">Pay</button>
+        <p align="center" id="error"></p>
+    </dl>

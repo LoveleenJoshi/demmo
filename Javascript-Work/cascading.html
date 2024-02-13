@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Site Products Cascading Style</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var Categories = ["Select any one", "Electronics", "Fashion", "Footwear"];
+        var Electronics = ["Select any one", "Television", "Mobile", "Appliances"];
+        var Fashion = ["Select any one", "Kids Wear", "Mens Wear", "Women Wear"];
+        var Footwear = ["Select any one", "Casuals", "Boots", "Shoes"];
+        var Television = ["select any one", "Thomson", "One Plus", "Samsung", "Motorola", "Sony", "Acer"];
+        var Mobile = ["Select any one", "Apple", "One Plus", "Realme", "Oppo", "Samsung", "Vivo", "Honor"];
+        var Appliances = ["Select any one", "Mouse", "kitchen items", "laptops", "Smart Watches"];
+        var Kids = ["Select any one", "Boys Wear", "Girls Wear", "Toys", "Baby care",];
+        var Mens = ["Select any one", "Top wear", "Bottom Wear", "Ethnic Wear", "Winter wear"];
+        var womens = ["Select any one", "Footwear", "Beauty and Grooming", "Jewellery", "Accessories"];
+        var Casuals = ["Select any one", "Addidas", "Nike", "Puma", "Dressberry"]
+        function Loadcategory() {
+            Categories.map(function (category) {
+                var option = document.createElement("option");
+                option.text = category;
+                option.value = category;
+                document.getElementById("lstcategory").appendChild(option);
+            })
+
+        }
+        var products = [];
+        function Loadproducts() {
+            document.getElementById("lstproduct").innerHTML = "";
+            products.map(function (product) {
+                var option = document.createElement("option");
+                option.text = product;
+                option.value = product;
+                document.getElementById("lstproduct").appendChild(option);
+            })
+
+        }
+        var items = [];
+        function Loaditems() {
+            document.getElementById("lstitem").innerHTML = "";
+            items.map(function (item) {
+                var option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                document.getElementById("lstitem").appendChild(option)
+            })
+        }
+        function productchange() {
+            var productname = document.getElementById("lstproduct").value;
+            switch (productname) {
+                case "Television":
+                    items = Television;
+                    Loaditems();
+                    break;
+
+                case "Mobile":
+                    items = Mobile;
+                    Loaditems();
+                    break;
+
+                case "Appliances":
+                    items = Appliances;
+                    Loaditems();
+                    break;
+
+                case "Kids Wear":
+                    items = Kids;
+                    Loaditems();
+                    break;
+
+                case "Mens Wear":
+                    items = Mens;
+                    Loaditems();
+                    break;
+
+                case "Womens Wear":
+                    items = womens;
+                    Loaditems();
+                    break;
+
+                case "Casuals":
+                    items = Casuals;
+                    Loaditems();
+                    break;
+            }
+        }
+        function categorychange() {
+            var categoryname = document.getElementById("lstcategory").value;
+            switch (categoryname) {
+                case "Electronics":
+                    products = Electronics;
+                    Loadproducts();
+                    break;
+
+
+                case "Fashion":
+                    products = Fashion;
+                    Loadproducts();
+                    break;
+
+                case "Footwear":
+                    products = Footwear;
+                    Loadproducts();
+                    break;
+
+                default:
+                    products = ["Select any One"];
+                    Loadproducts();
+                    break;
+            }
+        }
+        function bodyload() {
+            Loadcategory();
+        }
+    </script>
+</head>
+
+<body class="container-fluid d-flex bg-dark" onload="bodyload()">
+    <dl class="bg-light text-dark border border-2 border-danger rounded d-flex p-4  m-4 justify-content-around w-100">
+        <div class="me-4">
+            <dt>Select Category</dt>
+            <dd>
+                <select onchange="categorychange()" id="lstcategory" class="form-select" style="width: 180px;">
+
+                </select>
+            </dd>
+        </div>
+        <div class="me-4">
+            <dt>Select Products</dt>
+            <dd>
+                <select onchange="productchange()" id="lstproduct" class="form-select" style="width: 180px;">
+
+                </select>
+            </dd>
+        </div>
+
+
+        <div class="me-4">
+            <dt>Select Items</dt>
+            <dd>
+                <select id="lstitem" class="form-select" style="width: 180px;">
+
+                </select>
+            </dd>
+        </div>
+    </dl>
+
+</body>
+
+</html>

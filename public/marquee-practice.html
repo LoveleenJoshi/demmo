@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        .sale-heading marquee{
+            padding: 20px;
+            align-content: center;
+            background-color: beige;
+            margin-bottom: 5px;
+
+        }
+        marquee {
+            
+            padding: 80px;
+            background-color: rgb(211, 206, 199);
+            border: 2px double gray;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        img{
+            margin-right: 40px; 
+            transition: 2s;
+        }
+        img:hover{
+            transform: scale(1.5);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div align="center" class="sale-heading">
+           <marquee>
+            <h3>DIWALI SALE</h3>
+           </marquee>
+        </div>
+        <marquee width="960" height="360"   scrollamount="20"  behavior="alternate" onmouseover="this.stop() " onmouseout="this.start()">
+            <img src="assets/bags.jpeg" width="240" height="180" class="border border-success rounded rounded-pill">
+            <img src="assets/handbags.jpg" width="240" height="180" class="border border-success rounded rounded-pill">
+            <img src="assets/dress.jpeg" width="240" height="180" class="border border-success rounded rounded-pill">
+            <img src="assets/heels.jpeg" width="240" height="180" class="border border-success rounded rounded-pill">
+            <img src="assets/printed dress.jpeg" width="240" height="180" class="border border-success rounded rounded-pill">
+            <img src="assets/printed-shirt.jpeg" width="240" height="180" class="border border-success rounded rounded-pill">
+           
+        </marguee>
+    </article>
+
+    
+</body>
+</html>

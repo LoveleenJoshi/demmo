@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #html{
+            border:2px groove gray;
+            width:200px;
+            text-align: center;
+        }
+        #css{
+            border:2px groove gray;
+            width:200px;
+            text-align: center;
+        }
+        #js{
+            border:2px groove gray;
+            width:200px;
+            text-align: center;
+        }
+        section{
+            display: flex;
+           margin-top: 40px;
+            justify-content: center;
+            height: 200px;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+           
+        }
+        header span{
+            margin-right: 40px;
+        }
+        a{
+            text-decoration: none;
+        }
+        section div{
+            margin-right: 20px;
+
+        }
+        .card:target{
+           background-color:rgb(81, 81, 81);
+           border: 4px double black;
+            box-shadow: 4px 4px 2px black;
+            background-size: cover;
+            border-radius: 100px;
+            padding: 20px;
+            transition: 2s;
+            color: aliceblue;
+           
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span><a href="#html">HTML</a></span>
+        <span><a href="#css">CSS</a></span>
+        <span><a href="#js">Javascipt</a></span>
+    </header>
+    <section>
+        <div class="card" id="html">
+            <h2>HTML</h2>
+            <p>It is a markup Language.</p>
+        </div>
+
+        <div class="card" id="css">
+            <h2>CSS</h2>
+            <p>It Modify styles.</p>
+        </div>
+        <div class="card" id="js">
+            <h2>Javascript</h2>
+            <p>It manipulates DOM.</p>
+        </div>
+    </section>
+    
+</body>
+</html>

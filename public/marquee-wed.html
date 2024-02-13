@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        .advertisement{
+            background-color: rgb(250, 199, 218);
+            padding: 6px;
+            border-left: 6px solid white;
+            border-top: 6px solid lightpink;
+            border-right: 6px solid white;
+            border-bottom: 6px solid lightpink;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(189, 2, 65);
+        }
+      img{
+       
+        margin-right: 20px;
+      }
+      img:hover{
+        transform: scale(1.5);
+        border-radius: 10px;
+        transition: 2s;
+      }
+      marquee .adv{
+        padding: 20px;
+        margin:20px ;
+        border: 2px solid rgb(193, 7, 38);
+        display: flex;
+        border-top: 2px solid rgb(246, 200, 200);
+        border-bottom: 2px solid rgb(246, 200, 200);
+        border-left: none;
+        border-right: none;
+        
+      } 
+    .adv {
+        display: inline-flex;
+    }
+    marquee{
+        display: flex;
+    }
+    .body{
+        margin-right: 20px;
+        border-right: 12px double rgb(232, 199, 199);
+    }
+    .body .label{
+        text-align: center;
+    }
+    .label{
+        font-size: 20px;
+        color: rgb(241, 47, 112);
+    }
+    
+      
+    </style>
+</head>
+<body>
+    <article>
+        <div class="advertisement">
+            <marquee scrollamount="10">
+                Sale Is On!
+            </marquee>
+        </div>
+        <marquee scrollamount="20"  >
+        <div class="adv" >
+          
+               
+              <div class="body">
+                <div class="img"> 
+                     <img src="assets/flowers.jpg" width="200" height="200"></div>
+                     <div class="label">20% Discount</div>
+
+              </div>
+
+
+              <div class="body">
+                <div class="img">    <img src="assets/f2.jpg" width="200" height="200"></div>
+            <div class="label">30% Discount</div>
+              </div>
+                
+            
+              <div class="body">
+                <div class="img">  <img src="assets/flowers.jpg" width="200" height="200"></div>
+                <div class="label">10% Discount</div> 
+              </div>
+
+
+              <div class="body">
+                <div class="img"> 
+                     <img src="assets/mask-flower.jpg" width="200" height="200"></div>
+                     <div class="label">20% Discount</div>
+
+              </div>
+
+              <div class="body">
+                <div class="img">    <img src="assets/f2.jpg" width="200" height="200"></div>
+            <div class="label">30% Discount</div>
+              </div>
+
+              <div class="body">
+                <div class="img">  <img src="assets/mask-flower.jpg" width="200" height="200"></div>
+                <div class="label">10% Discount</div> 
+              </div>
+
+                
+               
+              
+            
+        </div>
+    </marquee>
+    </article>
+    
+    
+</body>
+</html>

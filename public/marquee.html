@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            margin-right: 40px;
+            transition: 2s;
+        }
+        marquee{
+            padding: 100px;
+        }
+        .headline{
+            background-color: aquamarine;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        img:hover{
+            transform: scale(2);
+            box-shadow: 2px 2px 8px gray;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        
+        <div class="headline" align="center">
+            
+            <h3>50% off on fashion! Diwali grand Festive Sale</h3>
+       
+        </div>
+   
+        <marquee scrollamount="10" bgcolor="#dedede" onmouseover=this.stop() onmouseout="this.start()">
+            
+            <img src="assets/handbags.jpg" height="140" width="200">
+            <img src="assets/bags.jpeg" height="140" width="200">
+            <img src="assets/dress.jpeg"height="140" width="200">
+            
+            <img src="assets/heels.jpeg"  height="140" width="200">
+        </marquee>
+    </article>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style type="text/css">
+        dt , dd{
+            margin-bottom: 20px;
+        }
+        #Code{
+            background-color: lightgrey;
+            border: 1px solid rgb(82, 81, 81);
+            width: 140px;
+            height: 20px;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+        <script type="text/javascript">
+        function GenerateCode(){
+           var a=Math.random()*10;
+           var b=Math.random()*10;
+           var c=Math.random()*10;
+           var d=Math.random()*10;
+           var e=Math.random()*10;
+           var f=Math.random()*10;
+          
+         var code=Math.round(a) + " " + Math.round(b) + " " + Math.round(c) + " " + Math.round(d) + " "  + Math.round(e) + " " + Math.round(f) ;
+         document.getElementById("Code").innerHTML= code;
+       
+        }
+
+       function bodyload(){
+        GenerateCode();
+       }
+       function reloadClick(){
+        GenerateCode();
+       }
+
+   </script>
+</head>
+<body onload="bodyload()">
+    <dl>
+        <h3>Register User:</h3>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text">
+       </dd>
+       <dt>Password </dt>
+       <dd>
+        <input type="password">
+      </dd>
+      <dt>Verify Code <button class="bi bi-arrow-clockwise" onclick="reloadClick()"></button></dt>
+      <dd id="Code"></dd>
+    </dl>
+    <button>Submit</button>
+</body>
+</html>

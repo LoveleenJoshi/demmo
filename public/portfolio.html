@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: black;
+            color: white;
+            padding: 16px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 11fr;
+        }
+        nav{
+            font-size: 18px;
+            font-weight: 700;
+            padding: 10px;
+            margin-left: -40px;
+            color: white;
+            width: 240px;
+            text-align: center;
+           
+        }
+        li{
+            list-style: none;
+            margin-bottom: 10px; border: 2px black solid;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+         main iframe{
+            width: 100%;
+            height: 640px;
+        }
+        nav iframe{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My HTML designs
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="./shopper-template.html" target="preview">Shopper template</a></li>
+                <li><a href="./netflix-main.html" target="preview">Netflix main</a></li>
+                <li><a href="./card.html" target="preview"><img src="assets/card-sample.jpg" width="100" height="100"></iframe></a></li>
+                <li><a href="./cascading.html" target="preview">CAscading Design</a></li>
+                <li><a href="./mobile-sample.html" target="preview">Mobile Sample</a></li>
+                <li><a href="./instagram-footer.html" target="preview">instagram-footer</a></li>
+            </ul>
+        </nav>
+        <main>
+            <iframe name="preview" src="./shopper-template.html"></iframe>
+        </main>
+    </section>
+    
+</body>
+</html>

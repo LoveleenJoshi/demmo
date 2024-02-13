@@ -1,0 +1,19 @@
+h2 {
+  background-color: yellow;
+  color: red;
+  border: 1px groove blue;
+  padding: 10px;
+}
+
+table {
+  font-family: Arial;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: aqua;
+}
+
+tr:nth-child(odd) {
+  background-color: aqua;
+}/*# sourceMappingURL=demo.css.map */

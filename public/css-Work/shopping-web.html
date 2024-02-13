@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Shopping website</title>
+    <style>
+        .heading{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            text-align: center;
+            flex-wrap: wrap;
+            
+            
+        }
+        .icons span{
+            font-size: 24px;
+            margin-right: 6px;
+        }
+        .bi-search{
+            position: absolute;
+            right: 10px;
+            font-size: 14px;
+           text-align: center;
+           justify-content: center;
+        }
+        nav span{
+            margin-right: 24px;
+            color: rgb(78, 78, 78); 
+        }
+        .icons div{
+            margin: 0px 6px 0px 6px;
+        }
+        .img{
+            background-size: cover;
+        }
+        .poster{
+            position: relative;
+            height: 300px;
+            background-color: rgb(14, 13, 13);
+            width: 110%;
+            height: 300px;
+
+            
+        }
+        .titles{
+            position: absolute;
+           left: 60px;
+            top:60px;
+        }
+        .shade{
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 110%;
+            height: 300px;
+
+        }
+        .titles span{
+            text-shadow: 2px 2px 1px rgb(167, 165, 165);
+            
+        }
+        .titles button{
+            text-shadow: initial;
+        }
+        button{
+            margin-top: 48px;
+        }
+        .card{
+            height: 300px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid rgb(232, 231, 231);
+            width: 260px;
+            text-align: center;
+        }
+        .Cards-row{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 500px;
+            margin-left: 80px;
+            
+            width:100%;
+            
+            
+        }
+        .product-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+           padding: 30px 0px 30px 0px;
+          
+        }
+       .product1{
+        margin-left: 20px;
+        position: relative;
+        margin-top: 30px;
+       }
+       .wishlist{
+        position: absolute;
+        background-color: #f0eeee;
+        width: 30px;
+        height: 30px;
+        border-radius: 80px;
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+        text-align: center;
+        justify-content: center;
+       }
+       .bi-heart{
+        color: #888686;
+       }
+       
+    </style>
+</head>
+<body>
+   <div class="heading" >
+    <div class="logo">
+        <img src="../assets/cartgilla-logo.jpg" width="140" height="60"></img>
+    </div>
+
+    <div class="search-bar" style=" position: relative;  display: flex; flex-wrap: wrap; height: 50px; align-items:center; width: 620px; border: 1px solid rgb(206, 204, 204); border-radius: 8px; padding: 10px; ">
+       <span style="font-size: 15px;  color: rgb(172, 171, 171);" >Serach For Products <span  class="bi bi-search"></span></span>
+      
+    </div>
+
+    <div class="icons" style="font-size: 22px; display:flex; flex-wrap: wrap;  color: rgb(60, 60, 60);  justify-content: center; align-items: center; height: 30px;">
+        <div style=" color: rgb(60, 60, 60);;">
+            <span class="bi bi-person" ></span>
+        </div>
+        <div style="text-align: center; justify-content: center; align-items: center; color: rgb(44, 44, 44); display: flex;"><span class="bi bi-heart"></span><span style="font-size: 14px;">My Account</span></div>
+       <div style="justify-content: center; align-items: center; margin-top: -50px; margin-left: -8px;" >
+        <button class="btn position-relative  "> <span style="color: rgb(60, 60, 60);" class="bi bi-cart3 rounded rounded-circle"><span class="badge position-absolute bg-danger rounded rounded-circle" style="font-size: 14px;">3</span></button>
+       </div>
+    </div>
+   </div> 
+   <nav style="font-size: 16px; width: fit-content;margin-left: 40px; padding: 10px 0px 10px 0px;">
+    <span > <font color="red">Home</font></span>
+    <span >Shop</span>
+    <span >Account</span>
+    <span >Pages</span>
+    <span >Blog</span>
+    <span >Docs/Components</span>
+   </nav>
+
+   
+   <div class="poster" style="width:100%;  ">
+    
+
+    <div class="img" style="display: flex; flex-wrap: wrap;">
+        <img src="../assets/poster.jpg" width="100%">
+       </div>
+       
+       <div class="titles" style="display: flex;flex-direction: column; display: flex; flex-wrap: wrap; ">
+        <span style="font-size: 26px; color: #fefefe; letter-spacing: 2px; line-height: 40px;">Has Just Arrived</span>
+        <span style="font-size: 40px;  color: #fefefe; font-weight: 600; letter-spacing: 2px;line-height: 64px;">Huge Summer Collection</span>
+        <span style="font-size: 20px; color: #fefefe; letter-spacing: 2px; line-height: 38px;">Swimwear,tops,Shorts,Sunglasses & much more...</span>
+       
+        <button class="btn btn-danger w-25 rounded rounded-2" >Shop Now <span class="bi bi-chevron-bar-right"></span></button>
+       </div>
+
+  
+ 
+   </div>
+   
+
+
+   <div class="Cards-row" >
+    <div class="card Men" style="box-shadow: 2px 2px 40px rgb(180, 179, 179);">
+        <img src="../assets/men-wear.jpg" width="100%" height="200">
+        <span style="margin-top: 28px;  color: rgb(78, 78, 78);font-weight: 600; ">Men</span>
+    </div>
+    <div class=" card Women"  style="box-shadow: 2px 2px 40px rgb(180, 179, 179);">
+        <img src="../assets/women-wear.jpg" width="100%" height="200">
+        <span style="margin-top: 28px;  color: rgb(78, 78, 78);  font-weight: 600;">Women</span>
+    </div>
+    <div class="card kid"  style="box-shadow: 2px 2px 40px rgb(180, 179, 179);">
+        <img src="../assets/kidds-wear.jpg" width="100%" height="200">
+        <span style="margin-top: 28px;  color: rgb(78, 78, 78); font-weight: 600; ">Kid</span>
+    </div>
+   </div>
+
+  <div class="main-title" style="font-size: 40px; letter-spacing: 1px; color: rgb(67, 67, 67); text-align: center; margin-top: 20px; font-weight: 500;">
+    Trending Products
+  </div>
+  
+
+
+  <div class="products-container" style="display: flex; flex-wrap: wrap; justify-content: space-evenly; ">
+    <div class="product-row" style="display: flex; flex-direction: row; flex-wrap: wrap; margin:0px 10px 0px 10px; justify-content: space-evenly;">
+
+        <div class="product1" style="width:280px; height: 360px; border: .5px solid rgb(212, 212, 212);  padding: 6px; border-radius: 8px; justify-content: space-evenly;">
+
+            <div class="product1-header" style="margin-bottom: 10px;">
+                <img src="../assets/sneakers.jpeg" width="100%" height="240">
+            </div>
+            <div class="product1-body" style="margin-left: 10px;" >
+                <div class="product1-body-title" style="font-size: 12px; color: #888686;">Sneakers & keds</div>
+                <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">Women Colorblock Sneakers</div>
+            </div>
+            <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+                <div style="margin-left: 10px;">
+                  <font color="blue">  $154.00</font>
+                </div>
+                <div style="color: #FFB21D;">
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="product1" style="width:280px; height: 360px; border: .5px solid rgb(212, 212, 212); padding: 6px; border-radius: 8px;">
+                <div class="product1-header" style="margin-bottom: 10px;">
+                    <img src="../assets/top.jpeg" width="100%" height="240">
+                </div>
+                <div class="product1-body" style="margin-left: 10px;" >
+                    <div class="product1-body-title" style="font-size: 12px; color: #888686;">Women's T-shirts</div>
+                    <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">Cotton Lace Blouse</div>
+                </div>
+                <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+                    <div style="margin-left: 10px;">
+                      <font color="blue">  $28.50   <font color="#929190"> <strike>$39.50</strike></font> </font>
+                    </div>
+                    <div style="color: #FFB21D;">
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-half"></span>
+                        <span class="bi bi-star-fill"></span>
+                    </div>
+                </div>
+            </div>
+      
+
+        <div class="product1" style="width:280px; display:inline; height: 360px; border: .5px solid rgb(212, 212, 212); padding: 6px; border-radius: 8px;">
+            <div class="product1-header" style="margin-bottom: 10px;">
+                <img src="../assets/shorts.jpg" width="100%" height="240">
+            </div>
+            <div class="product1-body" style="margin-left: 10px;" >
+                <div class="product1-body-title" style="font-size: 12px; color: #888686;">Women's Shorts</div>
+                <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">Mom High Waist Shorts</div>
+            </div>
+            <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+                <div style="margin-left: 10px;">
+                  <font color="blue">  $39.50</font>
+                </div>
+                <div style="color: #FFB21D;">
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-fill"></span>
+                    <span class="bi bi-star-half"></span>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+            </div>
+    </div>
+
+
+
+    <div class="product1" style="width:280px; height: 360px; border: .5px solid rgb(212, 212, 212); padding: 6px; border-radius: 8px;">
+        <div class="product1-header" style="margin-bottom: 10px;">
+            <img src="../assets/swimwear.jpg" width="100%" height="240">
+        </div>
+        <div class="product1-body" style="margin-left: 10px;" >
+            <div class="product1-body-title" style="font-size: 12px; color: #888686;">Women's Swimwear</div>
+            <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">Two piece Bikni in Print</div>
+        </div>
+        <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+            <div style="margin-left: 10px;">
+              <font color="blue">  $18.99</font>
+            </div>
+            <div style="color: #FFB21D;">
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-half"></span>
+                <span class="bi bi-star-fill"></span>
+            </div>
+        </div>
+</div>
+
+<div class="product1" style="width:280px; height: 360px; border: .5px solid rgb(212, 212, 212); padding: 6px; border-radius: 8px;">
+    <div class="product1-header" style="margin-bottom: 10px;">
+        <img src="../assets/glasses.jpg" width="100%" height="240">
+    </div>
+    <div class="product1-body" style="margin-left: 6px;" >
+        <div class="product1-body-title" style="font-size: 12px; color: #888686;">Men's SunGlasses</div>
+        <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">Polarised Sunglasses</div>
+    </div>
+    <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+        <div style="margin-left: 10px;">
+          <font color="#a1a1a1">Out Of Stock  </font>
+        </div>
+        <div style="color: #FFB21D;">
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-half"></span>
+            <span class="bi bi-star-fill"></span>
+        </div>
+    </div>
+    <div class="wishlist">
+        <span class="bi bi-heart"></span>
+    </div>
+</div>
+
+
+<div class="product1" style="width:280px; height: 360px; border: .5px solid rgb(212, 212, 212); padding: 6px; border-radius: 8px;">
+    <div class="product1-header" style="margin-bottom: 10px;">
+        <img src="../assets/bags,jpg.jpeg" width="100%" height="240">
+    </div>
+    <div class="product1-body" style="margin-left: 10px;" >
+        <div class="product1-body-title" style="font-size: 12px; color: #888686;">BackPacks</div>
+        <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">TH Jeans City Backpacks</div>
+    </div>
+    <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+        <div style="margin-left: 10px;">
+          <font color="blue"> $79.50</font>
+        </div>
+        <div style="color: #FFB21D;">
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-half"></span>
+            <span class="bi bi-star-fill"></span>
+        </div>
+    </div>
+    <div class="wishlist">
+        <span class="bi bi-heart"></span>
+    </div>
+</div>
+
+<div class="product1" style="width:280px; height: 360px; border: .5px solid rgb(212, 212, 212); padding: 6px; border-radius: 8px;">
+    <div class="product1-header" style="margin-bottom: 10px;">
+        <img src="../assets/jacket.jpg" width="100%" height="240">
+    </div>
+    <div class="product1-body" style="margin-left: 10px;" >
+        <div class="product1-body-title" style="font-size: 12px; color: #888686;">Sportswear</div>
+        <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">Women Sports Jacket</div>
+    </div>
+    <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+        <div  style="margin-left: 10px;">
+          <font color="blue"> $68.40</font>
+        </div>
+        <div style="color: #FFB21D;">
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-half"></span>
+            <span class="bi bi-star-fill"></span>
+        </div>
+    </div>
+    <div class="wishlist">
+        <span class="bi bi-heart"></span>
+    </div>
+</div>
+
+
+<div class="product1" style="width:280px; height: 360px; border: .5px solid rgb(212, 212, 212); padding: 6px; border-radius: 8px;">
+    <div class="product1-header" style="margin-bottom: 10px;">
+        <img src="../assets/sneakers.jpg" width="100%" height="240">
+    </div>
+    <div class="product1-body"  style="margin-left: 10px;" >
+        <div class="product1-body-title" style="font-size: 12px; color: #888686;">Women Sneakers</div>
+        <div class="product1-body-subtitle" style="font-size: 16px; font-weight:500;line-height: 26px;  color: #444343;">Leather High-Top Sneakers</div>
+    </div>
+    <div class="product1-footer" style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 8px;">
+        <div  style="margin-left: 10px;">
+          <font color="blue"> $215.00</font>
+        </div>
+        <div style="color: #FFB21D;">
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-fill"></span>
+            <span class="bi bi-star-half"></span>
+            <span class="bi bi-star-fill"></span>
+        </div>
+    </div>
+    <div class="wishlist">
+        <span class="bi bi-heart"></span>
+    </div>
+</div>
+
+
+
+
+            
+    </div>
+
+  </div>
+
+  <div class="btn" style="text-align: center; align-items: center; justify-content: center; display: flex; margin-top: -60px;">
+    <button class="btn btn-outline-primary">More Products<span class="bi bi-chevron-bar-right"></span></button>
+  </div>
+
+
+
+    <div class="shop-title" style="font-size: 32px; display: flex; justify-content: center; color: #494848; margin: 30px 0px 20px 0px;">
+        Shop By Brand
+    </div>
+
+    <div class="shop" style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-left: 30px; margin-right: 30px; ">
+        <div  style="width: 300px; border-radius: 8px; height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center;margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/puma.jpg" width="120" height="80">
+        </div>
+
+
+        <div  style="width: 300px;border-radius: 8px;  height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center;margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/tommy-logo.jpg" width="120" height="80">
+        </div>
+
+        <div  style="width: 300px; height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/addidas.jpg" width="120" height="80">
+        </div>
+
+        <div  style="width: 300px; height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/columbia.jpg" width="120" height="80">
+        </div>
+
+        
+        <div  style="width: 300px;  border-radius: 8px; height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/nike.jpg" width="120" height="80">
+        </div>
+        <div  style="width: 300px; border-radius: 8px;  height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/brooks.jpg" width="120" height="80">
+        </div>
+        <div  style="width: 300px; border-radius: 8px;  height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/hermes.jpg" width="120" height="80">
+        </div>
+        <div  style="width: 300px; border-radius: 8px;  height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/american-tourist.jpg" width="120" height="80">
+        </div>
+        <div  style="width: 300px; border-radius: 8px;  height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center;  margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/newbalance.jpg" width="120" height="80">
+        </div>
+        <div  style="width: 300px; border-radius: 8px; height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center;  margin-bottom: 20px; display: flex; justify-content: center; ">
+            <img src="../assets/fila.jpg" width="120" height="80">
+        </div>
+        <div  style="width: 300px; border-radius: 8px; height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; display: flex; margin-bottom: 20px; justify-content: center; ">
+            <img src="../assets/dior.jpg" width="120" height="80">
+        </div>
+        <div  style="width: 300px;  border-radius: 8px; height: 120px;  box-shadow: 1px 1px 10px rgb(226, 225, 225); align-items: center; display: flex; margin-bottom: 20px; justify-content: center; ">
+            <img src="../assets/rayban.jpg" width="120" height="80">
+        </div>
+  </div>
+
+  <div class="grid" style="display: grid; grid-template-columns: 6fr 6fr; height: 200px; margin-top: 50px; ">
+    <div style="background-color: #fceeeb;   display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px; justify-content: center; align-items: center;">
+        <div class="grid-icon" style="font-size: 24px; color: #f26343;">
+            <span class="bi bi-pen-fill"></span>
+        </div>
+        <div class="grid-title" style="font-size: 20px; font-weight:600 ; line-height: 40px; color: #494848;">
+            Read the Blog
+        </div>
+        <div class="grid-subtitle"  style="font-size: 12px; line-height: 26px; color: #888686;">
+            Latest Store,Fashion news and trends
+        </div>
+    </div>
+
+    <div style="background-color: #ced6f6;  display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px; justify-content: center; align-items: center;">
+        <div class="grid-icon" style="font-size: 24px; color:  #4165f4;">
+            <span class="bi bi-instagram"></span>
+        </div>
+        <div class="grid-title" style="font-size: 20px; font-weight:600 ; line-height: 40px; color: #494848;">
+           Follow on Instagram
+        </div>
+        <div class="grid-subtitle" style="font-size: 12px; line-height: 26px; color: #888686;">
+          #ShopWithCartZilla
+        </div>
+    </div>
+
+  </div>
+  <footer>
+   <div class="footer-row1">
+    <div class="footer-heading">
+        Shop Departments
+    </div>
+    <div>Sneakers & Athletic</div>
+    <div>Athletic Apparel</div>
+    <div></div>
+      
+   </div>
+  </footer>
+  
+
+
+</body>
+</html>

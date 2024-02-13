@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+   <style>
+   
+   </style>
+       
+    </head>
+   <body class="container-fluid">
+  <div class="m-4 p-4 alert alert-info alert-dismissible">
+    <h2 class="text-center mb-4 fw-bold">EMI Calculator</h2>
+    <button class="btn-close me-4 " data-bs-dismiss="alert"></button>
+    <div class="row">
+        <div class="col ms-2 me-2">
+            Amount you need <input type="text" placeholder="&#8377; 500000" size="10">
+        </div>
+        <div class="col ms-2 me-2">
+           For<input type="text" placeholder="5" size="10"> Years
+        </div>
+        <div class="col ms-2 me-2">
+            Interest Rate <input type="text" placeholder="10.5%" size="10">
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col mt-4 ms-2 me-2">
+         &#8377;50,000   <input type="range" min="50000" max="4000000" value="200000" class="form-range" style="width: 180px;">   &#8377;40,00,000 
+        </div>
+        <div class="col mt-4 ms-2 me-2">
+         1 Year   <input type="range" min="1" max="5" value="1" class="form-range" style="width: 180px;">   5 Year
+           </div>
+           <div class="col mt-4 ms-2 me-2">
+            10.5%  <input type="range" min="10.5" max="21" value="10.5" class="form-range" style="width: 180px;">  21%
+           </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col text-center mt-4">
+            <button class="btn btn-primary">Calculate</button>
+        </div>
+    </div>
+  </div>
+
+  
+  
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

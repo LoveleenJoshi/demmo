@@ -1,0 +1,26 @@
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function deleteClick(){
+            flag=confirm("Delete Record\nRecord will be Deleted Permanently?");
+            if(flag==true)
+            {
+               document.write("<font color='red' size='5'><b><i>Records Are Deleted.</i></b></font><br><a href='variables.html'>back</a>");
+            } else
+            {
+                alert("You Canceled.");
+            }
+        }
+
+    </script>
+   </head>
+   <body>
+    <button onclick="deleteClick()">Delete</button>
+   </body>
+   </html>

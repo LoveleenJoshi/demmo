@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <title>Document</title>
+    <script type="text/javascript">
+     function ageChange(){
+     document.getElementById("txtAge").value=document.getElementById("lAge").value;
+   }
+   function AgeChange(){
+     document.getElementById("TxtAge").value=document.getElementById("LAge").value;
+   }
+   function CalculateClick(){
+   
+    var w=parseInt(document.getElementById("txtweight").value);
+    var h=parseFloat(document.getElementById("txtheight").value);
+    var H=h*h;
+    var BMI=w/H;
+    document.getElementById("msg").style.display="block";
+    document.getElementById("msg").innerHTML=Math.round(BMI);
+    
+    if(BMI<=18.4){
+       document.getElementById("you").style.marginLeft="20px";
+    }
+    else if(BMI<=24.9 && BMI>=18.4){
+        document.getElementById("you").style.marginLeft="130px";
+    }
+    else if(BMI<=39.9  && BMI>=25){
+        document.getElementById("you").style.marginLeft="260px";
+    }
+     else{
+        document.getElementById("you").style.marginLeft="400px";
+    }
+    var Male=document.getElementById("MALE");
+    var FeMale=document.getElementById("FEMALE");
+    if(Male.checked){
+        document.getElementById("msg").innerHTML="Y0ur Gender Is Male and your BMI Is  " + " " + Math.round(BMI);
+    }
+    if(FeMale.checked){
+        document.getElementById("msg").innerHTML="Y0ur Gender Is Female and your BMI Is  " + " " + Math.round(BMI);
+    }
+
+   }
+   function calculateclick(){
+   
+   var W=parseInt(document.getElementById("weight").value);
+   var height=parseFloat(document.getElementById("height").value)/100;
+   var Height=height*height;
+   var bmi=W/Height;
+   document.getElementById("MSG").style.display="block";
+   document.getElementById("MSG").innerHTML=Math.round(bmi);
+
+
+  }
+   BM
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="m-4 w-100 d-flex flex-row text-center justify-content-center">
+       
+            <div class="me-4 text-center">
+                <button class="btn ps-4 pe-4 btn-info" data-bs-toggle="modal" data-bs-target="#info">In-Centimeters</button>
+            </div>
+             <div class="text-center">
+                <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#info2">In-Meters</button>
+            </div>
+        </div>
+    </div>
+     
+
+
+    <div class="modal" id="info">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="text-center">BMI Calculator</h3>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <dl>
+                    <dt>Gender</dt>
+                    <dd class="d-flex">
+                         <input type="radio" value="Male" name="Gender" checked class="form-check-input mt-2"><label class="form-check-label">Male</label>
+                        </dd>
+                    <dd>
+                        <input type="radio" value="Female" name="Gender"  class="form-check-input mt-2"><label class="form-check-label">Female</label>
+                       </dd>
+
+                    <dt class="mt-3">Age</dt>
+                    <dd>
+                        <input type="text" size="10" id="txtAge" class="form-control mt-2">
+                    </dd>
+                    <dd class="text-center">
+                      2  <input type="range" id="lAge" min="2" max="120" value="2" class="form-range mt-2 w-75" onchange="ageChange()"> 120
+                    </dd>
+                    <dt class="mt-3">Height</dt>
+                    <dd>
+                        <input type="text" id="height" placeholder="In-Centimeters" class="form-control mt-2">
+                    </dd>
+                    <dt class="mt-3">Weight</dt>
+                    <dd>
+                        <input type="text" id="weight" placeholder="In-Kg" class="form-control mt-2">
+                    </dd>
+                    <dt>Your BMI</dt>
+                    <dd id="MSG" class="text-dark border border-2 border-light rounded rounded-2 p-3" style="display: none;">
+
+                    </dd>
+                    
+                </dl>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" onclick="calculateclick()">Calculate</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal" id="info2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="text-center">BMI Calculator</h3>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <dl>
+                    <dt>Gender</dt>
+                    <dd class="d-flex">
+                         <input type="radio" value="male" id="MALE"  name="gender" checked class="form-check-input mt-2"><label class="form-check-label">Male</label>
+                        </dd>
+                    <dd>
+                        <input type="radio" value="female" id="FEMALE" name="gender"  class="form-check-input mt-2"><label class="form-check-label">Female</label>
+                       </dd>
+
+                    <dt class="mt-3">Age</dt>
+                    <dd>
+                        <input type="text" size="10" id="TxtAge" class="form-control mt-2">
+                    </dd>
+                    <dd class="text-center">
+                       2 <input type="range" id="LAge" min="2" max="120" value="2" class="form-range mt-2 w-75" onchange="AgeChange()"> 120
+                    </dd>
+                    <dt class="mt-3">Height</dt>
+                    <dd>
+                        <input type="text" id="txtheight" placeholder="In-Meters" class="form-control mt-2">
+                    </dd>
+                    <dt class="mt-3">Weight</dt>
+                    <dd>
+                        <input type="text" id="txtweight" placeholder="In-Kg" class="form-control mt-2">
+                    </dd>
+                    <dt>Your BMI</dt>
+                    <dd id="msg" class="text-dark border border-2 border-light rounded rounded-2 p-3" style="display: none;">
+
+                    </dd>
+                    <div class="mt-4">
+                        <div class="progress">
+                            <div class="progress-bar bg-light text-dark" style="width:20%">
+                              Underweight
+                            </div>
+                            <div class="progress-bar bg-warning" style="width:25%">
+                                Normal
+                            </div>
+                            <div class="progress-bar bg-success" style="width:30%">
+                                Overweight
+                            </div>
+                            <div class="progress-bar bg-danger"  style="width:25%">
+                                Obese
+                            </div>
+                          
+                        </div>
+                        <div >
+                            <div class="bi bi-triangle-fill ps-2" id="you" style="font-size: 24px;"></div>
+                        </div>
+                    </div>
+                </dl>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" onclick="CalculateClick()">Calculate</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+     
+
+    <div class="mt-4 bg-dark text-white w-50 border border-light" style="display: none;">
+        <h3 class="p-4">Your Body Mass Index</h3>
+        <div id="Info-ContainerCM">
+
+        </div>
+
+    </div>
+
+    <div class="mt-4 bg-dark text-white w-50 border border-light" style="display: none;">
+        <h3 class="p-4">Your Body Mass Index</h3>
+        <div id="Info-ContainerM">
+            
+        </div>
+
+    </div>
+     
+
+
+    
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
+  
+
+
+
+   
+   
+
+  
+ 
+   

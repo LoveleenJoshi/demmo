@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking App</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var Movies = ["Select Movie", "Barbie", "Baby", "Satyprem Ki katha"];
+        var Barbie = ["Select Cinema", "INOX Jai Ganesh Vision Mall,Akurdi", "INOX Bund Garden", "INOX: Amanora Town Centre, Hadapsar"];
+        var Baby = ["Select Cinema", "INOX: Amanora Town Centre, Hadapsar"];
+        var Satypremkikaha = ["Select Cinema", "INOX Bund Garden", "INOX: Royal Heritage Mall, NIBM Ext.", "INOX: Elpro City Square, Chinchwad"]
+        var cinemas = [];
+        var INOXJaiGaneshVisionMallAkurdi = ["Select Date", "TODAY 21st July", "TOMORROW 22nd July"];
+        var INOXBundGarden = ["Select Date", "TODAY 21st July", "SUNDAY 23rd July"];
+        var INOXAmanoraTownCentreHadapsar = ["Select Date", "TODAY 21st July", "SUNDAY 23rd July"];
+        var INOXRoyalHeritageMall = ["Select Date", "SUNDAY 23rd July"];
+        var INOXElproCitySquareChinchwad = ["Select Date", "TODAY 21st July", "SUNDAY 23rd July"]
+        var dates = [];
+        var TODAY21stJuly = ["Select Time", "09.05 A.M", "12.00 P.M"];
+        var TOMORROW22ndJuly = ["Select Time", "03.05 P.M", "07.00 P.M"];
+        var SUNDAY23rdJuly = ["Select Time", "09.05 A.M", "07.00 P.M"];
+        var times = [];
+        var nine = ["Select Seats", "1", "2", "3"];
+        var tweleve = ["Select Seats", "1", "2", "3", "4", "5"];
+        var three = ["Select Seats", "1", "2", "3"];
+        var seven = ["Select Seats", "1", "2", "3", "4", "5"];
+        var seats = [];
+
+
+        function loadMovie() {
+            for (var Movie of Movies) {
+                var option = document.createElement("option");
+                option.text = Movie.toUpperCase();
+                option.value = Movie;
+                document.getElementById("lstMovies").appendChild(option);
+            }
+
+
+        }
+        function bodyload() {
+            loadMovie();
+        }
+        function loadCinema() {
+            for (var cinema of cinemas) {
+                var option = document.createElement("option");
+                option.text = cinema.toUpperCase();
+                option.value = cinema;
+                document.getElementById("lstCinema").appendChild(option);
+
+            }
+        }
+        function loadDates() {
+            for (var date of dates) {
+                var option = document.createElement("option");
+                option.text = date;
+                option.value = date;
+                document.getElementById("lstDate").appendChild(option);
+
+            }
+        }
+        function moviechange() {
+            document.getElementById("lstCinema").innerHTML = "";
+            var movieName = document.getElementById("lstMovies").value;
+            switch (movieName) {
+                case "Barbie":
+                    cinemas = Barbie;
+                    loadCinema();
+                    break;
+
+                case "Baby":
+                    cinemas = Baby;
+                    loadCinema();
+                    break;
+
+                case "Satyprem Ki katha":
+                    cinemas = Satypremkikaha;
+                    loadCinema();
+                    break;
+
+
+            }
+            document.getElementById("MovieName").value = document.getElementById("lstMovies").value;
+
+        }
+        function Cinemachange() {
+            document.getElementById("lstDate").innerHTML = "";
+
+            var CinemaName = document.getElementById("lstCinema").value;
+            switch (CinemaName) {
+                case "INOX Jai Ganesh Vision Mall,Akurdi":
+                    dates = INOXJaiGaneshVisionMallAkurdi;
+                    loadDates();
+                    break;
+
+                case "INOX Bund Garden":
+                    dates = INOXBundGarden;
+                    loadDates();
+                    break;
+
+                case "INOX: Amanora Town Centre, Hadapsar":
+                    dates = INOXAmanoraTownCentreHadapsar;
+                    loadDates();
+                    break;
+
+                case "INOX: Royal Heritage Mall, NIBM Ext.":
+                    dates = INOXRoyalHeritageMall;
+                    loadDates();
+                    break;
+
+                case "INOX: Elpro City Square, Chinchwad":
+                    dates = INOXElproCitySquareChinchwad;
+                    loadDates();
+                    break;
+
+            }
+            document.getElementById("CinemaName").value = document.getElementById("lstCinema").value;
+        }
+        function loadtimes() {
+            for (var time of times) {
+                var option = document.createElement("option");
+                option.text = time;
+                option.value = time;
+                document.getElementById("lstTime").appendChild(option);
+            }
+
+        }
+        function loadDate() {
+            document.getElementById("lstTime").innerHTML = "";
+            var date = document.getElementById("lstDate").value;
+            switch (date) {
+                case "TODAY 21st July":
+                    times = TODAY21stJuly;
+                    loadtimes();
+                    break;
+                case "SUNDAY 23rd July":
+                    times = SUNDAY23rdJuly;
+                    loadtimes();
+                    break;
+                case "TOMORROW 22nd July":
+                    times = TOMORROW22ndJuly;
+                    loadtimes();
+                    break;
+            }
+            document.getElementById("lbldate").value = document.getElementById("lstDate").value;
+        }
+        function loadseats() {
+            for (var seat of seats) {
+                var option = document.createElement("option");
+                option.text = seat;
+                option.value = seat;
+                document.getElementById("lstseats").appendChild(option);
+            }
+        }
+        function timeChange() {
+            document.getElementById("lstseats").innerHTML = "";
+            var time = document.getElementById("lstTime").value;
+            switch (time) {
+                case "09.05 A.M":
+                    seats = nine;
+                    loadseats();
+                    break;
+
+                case "12.00 P.M":
+                    seats = tweleve;
+                    loadseats();
+                    break;
+
+                case "07.00 P.M":
+                    seats = seven;
+                    loadseats();
+                    break;
+
+                case "03.05 P.M":
+                    seats = three;
+                    loadseats();
+                    break;
+            }
+            document.getElementById("lblTime").value = document.getElementById("lstTime").value;
+
+
+        }
+        function seatsChange() {
+            document.getElementById("lblSeat").value = document.getElementById("lstseats").value;
+
+        }
+
+    </script>
+    <style>
+        body {
+            background-image: url("../public/assets/netflix-banner.jpeg");
+            background-size: cover;
+        }
+
+        .poster {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 800px;
+            margin-top: -200px;
+        }
+    </style>
+</head>
+
+<body onload="bodyload()">
+    <div class="poster">
+        <div class="d-flex justify-content-between w-100" style="margin-top: 200px;">
+            <div class="bg-danger bg-gradient p-4 d-flex justify-content-center w-100 m-4 rounded">
+                <select class="form-select mx-3" id="lstMovies" onchange="moviechange()">
+
+                </select>
+                <select class="form-select mx-3" id="lstCinema" onchange="Cinemachange()">
+
+                </select>
+                <select class="form-select mx-3" id="lstDate" onchange="loadDate()">
+
+                </select>
+
+                <select class="form-select mx-3" id="lstTime" onchange="timeChange()">
+
+                </select>
+
+                <select class="form-select" id="lstseats" onchange="seatsChange()">
+
+                </select>
+                <button class="btn btn-secondary rounded ms-2" data-bs-target="#result" data-bs-toggle="modal"
+                    onclick="bookClick()">Book</button>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="modal fade" id="result">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Booking Summary</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Movie Name</dt>
+                        <dd>
+                            <input type="text" id="MovieName" class="form-control text-secondary">
+                        </dd>
+
+                        <dt>Cinema</dt>
+                        <dd>
+                            <input type="text" id="CinemaName" class="form-control text-secondary">
+                        </dd>
+
+                        <dt>Date</dt>
+                        <dd>
+                            <input type="text" id="lbldate" class="form-control text-secondary">
+                        </dd>
+                        <dt>Time</dt>
+                        <dd>
+                            <input type="text" id="lblTime" class="form-control text-secondary">
+                        </dd>
+                        <dt>Seats</dt>
+                        <dd>
+                            <input type="text" id="lblSeat" class="form-control text-secondary">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

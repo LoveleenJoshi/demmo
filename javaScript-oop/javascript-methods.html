@@ -1,0 +1,19 @@
+<script>
+    class product {
+        Name = "Samsung Tv";
+        Price = 12000.22;
+        Qty = 3;
+        total() {
+            return this.Price * this.Qty;
+        }
+        print() {
+            document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Qty=${this.Qty}<br>Total bill=${this.total()}`);
+
+        }
+    }
+    let obj = new product;
+    obj.Price = parseFloat(prompt("Enter price"));
+    obj.Qty = parseInt(prompt("Enter Qty"));
+    obj.print();
+
+</script>

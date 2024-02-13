@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forward Jump</title>
+    <script type="text/javascript">
+        var CardDetails = {
+            Card: "1111222233334567",
+            Cvv: "676",
+            Expiry: "2023"
+        }
+        function verifyCard() {
+            var card = document.getElementById("card").value;
+            if (CardDetails.Card === card) {
+                document.getElementById("CvvContainer").style.display = "block";
+            }
+        }
+        function verifyCvv() {
+            var Cvv = document.getElementById("cvv").value;
+            if (CardDetails.Cvv === Cvv) {
+                document.getElementById("ExpiryContainer").style.display = "block";
+            }
+
+        }
+        function ExpiryChange() {
+            var Expiry = document.getElementById("Expiry").value;
+            if (CardDetails.Expiry === Expiry) {
+                document.getElementById("Verify").style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Card Details</legend>
+
+        <dl>
+            <dt>Card Number</dt>
+            <dd>
+                <input type="text" id="card" onblur="verifyCard()">
+            </dd>
+
+            <div id="CvvContainer" style="display: none;">
+                <dt>Cvv</dt>
+                <dd>
+                    <input type="text" id="cvv" onblur="verifyCvv()">
+                </dd>
+            </div>
+
+            <div id="ExpiryContainer" style="display:none;">
+                <dt>Expiry</dt>
+                <dd>
+                    <select id="Expiry" onchange="ExpiryChange()">
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                    </select>
+                </dd>
+            </div>
+        </dl>
+
+        <button id="Verify" style="display: none;">Verify</button>
+    </fieldset>
+
+</body>
+
+</html>

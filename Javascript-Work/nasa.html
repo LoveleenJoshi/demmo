@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa-Api</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function bodyload() {
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (products) {
+                    products.photos.map(function (product) {
+                        var tr = document.createElement("tr");
+                        var tdId = document.createElement("td");
+                        var tdCamera = document.createElement("td");
+                        var tdRover = document.createElement("td");
+                        var tdPreview = document.createElement("td");
+                        tdId.innerHTML = product.id;
+                        tdCamera.innerHTML = product.camera.full_name;
+                        tdRover.innerHTML = product.rover.name;
+                        tdPreview.innerHTML = `<img src=${product.img_src} width="50" height="50">`;
+                        tr.appendChild(tdId);
+                        tr.appendChild(tdCamera);
+                        tr.appendChild(tdRover);
+                        tr.appendChild(tdPreview);
+                        document.querySelector("tbody").appendChild(tr);
+                    })
+                })
+        }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Camera Full Name</th>
+                <th>Rover Name</th>
+                <th>Preview</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

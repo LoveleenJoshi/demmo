@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        .container{
+            position: absolute;
+        }
+        .card{
+            z-index: 0;
+            margin-left: 850px;
+            margin-top: -345px;
+           border-bottom-right-radius: 120px;
+           border-top-left-radius: 120px;
+        }
+        .img{
+            z-index: 1;
+            margin-left: 620px;
+            margin-top: -240px;
+        }
+        .img-sm1{
+            z-index: 2;
+            margin-top: -220px;
+            margin-left: 596px;
+            
+        }
+        .img-sm2{
+            z-index: 3;
+            margin-top: -120px;
+            margin-left: 580px;
+        }
+        .title{
+            width: 380px;
+            font-size: 48px;
+            font-family: arial;
+            font-weight: bold;
+            margin: 200px 0px 0px 100px;
+           
+        }
+        section{
+            display: grid;
+            
+       
+        }
+        body{
+            background-color: rgb(243, 244, 245);
+        }
+        fieldset{
+            border: 1px solid rgb(25, 31, 2);
+            width: 200px;
+        }
+       legend{
+        float: none;
+        width: auto;
+        font-size: 16px;
+        padding-left: 4px;
+       }
+       .enquiry .icon{
+        font-size: 32px;
+        
+       }
+       .enquiry{
+        display: flex;
+       }
+       .icon{
+        padding:6px 3px 0px 2px;
+        margin:6px 3px 0px 2px;
+      
+       }
+       legend+option{
+        text-align: center;
+       }
+       .enquiry-body{
+        display: flex;
+        margin-right: 120px;
+        text-align: center;
+        justify-content: center;
+       }
+       .enquiry{
+        border: 1px solid black;
+        padding: 10px;
+        z-index: 4;
+        margin-left: 60px;
+        margin-top: 580px;
+        background-image: linear-gradient(to bottom left,#fffefe 20%,#727171 );
+        text-align: center;
+        justify-content: center;
+        box-shadow: 2px 2px 8px rgb(93, 93, 93);
+       }
+    </style>
+</head>
+<body>
+   <section>
+    <div class="title">
+        Find The Top Hotels NearBy.
+    </div>
+  
+   <div class="container-body">
+    <div class="container card" style="background-color: black; width: 580px; height: 750px;"></div>
+    <div class=" container img">
+        <img src="assets/hotels.jpeg" width="500" height="600" class="rounded rounded-4 border border-2 border-white">
+    </div>
+    <div class="container img-sm1">
+        <img src="assets/hotels-2.jpeg" width="40" height="40" class="rounded rounded-circle border border-white border-3">
+    </div>
+    <div class="container img-sm2">
+        <img src="assets/hotels-2.jpeg" width="60" height="60" class="rounded rounded-circle border border-white border-3">
+    </div>
+
+
+
+   </div>
+    <div class=" container enquiry">
+   <div class="enquiry-body">
+    <div class="icon">
+        <span class="bi bi-geo-alt"></span>
+        
+    </div>
+    <div>
+        <fieldset>
+            <legend>Location</legend> 
+            <option>Select Location</option>
+        </fieldset>
+    </div>
+   </div>
+
+
+   <div class="enquiry-body">
+    <div class="icon">
+        <span class="bi bi-calendar"></span>
+        
+    </div>
+    <div>
+        <fieldset>
+            <legend>Check-In-Out</legend> 
+            <option>19sept to 28sept</option>
+        </fieldset>
+    </div>
+   </div>
+
+
+    <div class="enquiry-body">
+        <div class="icon">
+            <span class="bi bi-person"></span>
+            
+        </div>
+        <div>
+            <fieldset>
+                <legend>Guests & Rooms</legend> 
+                <option>2 Guests 1 Room</option>
+            </fieldset>
+        </div>
+    </div>
+
+
+    
+   </section>
+  
+</body>
+</html>

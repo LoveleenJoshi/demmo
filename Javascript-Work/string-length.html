@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function verifyName(){
+            var UserName=document.getElementById("userName").value;
+            var UserError=document.getElementById("userError");
+            if(UserName.length==0){
+                UserError.innerHTML="Name Is Required".fontcolor('red');
+            }else{
+                if(UserName.length<4){
+                    UserError.innerHTML = "Name is too Short".fontcolor('red');
+                }else{
+                    UserError.innerHTML = "";
+                }
+                     }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" id="userName" onkeyup="verifyName()">
+        </dd>
+        <dd id="userError"></dd>
+    </dl>
+</body>
+</html>

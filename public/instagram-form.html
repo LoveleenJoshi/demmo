@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>instagram form design</title>
+    <style>
+        body{
+            height: 1000px;
+        }
+       
+        
+        fieldset{
+            border: 1px solid gray;
+            border-left: none;
+            border-bottom: none;
+            border-right: none;
+           margin: 10px;
+        }
+        legend{
+            width: auto;
+            float: none;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 16px;
+            color: gray;
+            
+           
+        }
+        a{
+            text-decoration: none;
+            color: rgb(1, 42, 119);
+            text-align: center;
+            margin: 10px;
+        }
+        
+       .bi-facebook{
+        font-size: 16px;
+       }
+       h1{
+        font-family:brushscriptmt;
+        text-align: center;
+       }
+       .container{
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        margin: 50px;
+       }
+       img{
+        margin-top: 40px;
+        margin-left: 140px;
+       } 
+       footer{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      
+
+       }
+       footer span{
+        margin-right: 16px;
+        
+        
+       }
+       .footer-row1{
+        margin-bottom: 10px;
+       }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/instagram.jpeg" width="400" height="500">
+ 
+
+        <div class="form" style="width: 400px; text-align: center;">
+            <form class="border  m-4 p-3">
+                <h1>Instagram</h1>
+                <div class="mb-2 " >
+                    <input type="text" name="username" placeholder="Phone Number, Email Address or username " class="form-control bg-light">
+                </div>
+                <div class="mb-2">
+                    <input type="password" name="Password" placeholder="Password" class="form-control bg-light ">
+                </div>
+                <div class="mb-2 mt-2">
+                    <button class="btn btn-primary w-100 rounded-2 ">Login</button>
+                </div>
+                <fieldset>
+                    <legend>or</legend>
+                   
+        
+                </fieldset>
+               <a href="#login"> 
+                 <div id="login">
+                <span class="bi bi-facebook">   Log in With facebook</span>
+               </div>
+               </a>
+               <div class="mb-2 w-100" style="text-align: center; font-size: 14px; color: rgb(92, 92, 92);">Forgotten your Password?</div>
+        
+              
+                    
+               
+            </form>
+            <form class="border border-1 m-4 p-4" style="text-align: center; padding: 4px;" width="400">
+             <div >Don't have an account?<a href="#">Sign Up</a></div>
+            </form>
+
+            <div style="text-align: center; font-size: 14px; color: rgb(61, 60, 60);">Get the App.</div>
+
+           <div class="advertisement" style="display: grid; grid-template-columns: 6fr 6fr; padding: 20px; margin-left: 10px;" >
+            <div class="appstore" style="width: 140px; margin-right:10px ; margin-left: 10px; height: 80px; border-radius: 8px; background-color: black; color: white;">
+            <div class="icon" style="font-size: 24px;">
+                <span class="bi bi-apple"></span>
+            
+          
+                <span><font size="2">Download it on </font>AppStore</span>
+            
+        </div>
+        </div>
+
+        <div class="appstore" style="width: 140px; height: 80px; border-radius: 8px;   background-color: black; color: white;">
+            <div class="icon" style="font-size: 24px; text-align: center; ">
+                <span class="bi bi-google-play"></span>
+            
+          
+                <span><font size="2">Download it on </font>PlayStore</span>
+            
+        </div>
+        </div>
+           </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-row1" style=" font-size: 12px; font-weight:400; color:rgb(125, 125, 125);">
+            <span>Meta</span>
+            <span>About</span>
+            <span>Blog</span>
+            <span>Jobs</span>
+            <span>Help</span>
+            <span>ApI</span>
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Top Accounts</span>
+            <span>Locations</span>
+            <span>Instagram Lite</span>
+            <span>Contact Uploading and non-users</span>
+            <span>Meta Verified</span>
+
+        </div>
+        <div class="footer-row2" style=" font-size: 12px; font-weight:400; color:rgb(125, 125, 125);">
+            <span>English(uk)</span>
+            <span>&copy; 2023 Instagram from Meta</span>
+        </div>
+    </footer>
+    
+</body>
+</html>

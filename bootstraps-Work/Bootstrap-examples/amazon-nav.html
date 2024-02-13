@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon nav Design</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        fieldset{
+            border: 1px solid gray;
+            border-left: none;
+            border-right: none;
+        }
+        legend{
+            float: none;
+            width: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn-dark p-2 d-flex" style="height:80px; width:180px;" data-bs-target="#location" data-bs-toggle="modal">
+    <div > <span class="bi bi-geo-alt" class="d-inline me-4" style="font-size: 30px;"></span></div>
+        <div class="d-inline"> 
+            <div><font size="1">  hello</font></div>
+            <div><font size="2"><b>Select Your Address</b></font></div>
+      </div>
+    </button>
+    <div class="modal " id="location">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Choose Your location
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Select a delivery location to see product availability and delivery options</p>
+                    <button class="btn btn-warning w-100"> Sign In to see your Addresses</button>
+                    <fieldset class="mt-4">
+                        <legend style="font-size: 12px; text-align: center;">
+                            Or Enter an indian code
+                        </legend>
+                        <div class="d-flex mt-2 mb-4">
+                            <input type="text" class="form-control p-2 me-3">
+                            <input type="text" class="form-control p-2">
+                        </div>
+                        
+                    </fieldset>
+                    <div class="modal-footer">
+                        <select class="form-select w-100">
+                            <option>Deilvery outside India</option>
+                            <option>India</option>
+                            <option>bangladesh</option>
+                            <option>Sri Lanka</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script src="../../node_modules/jquery/dist/jquery.js"></script> 
+   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

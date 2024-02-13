@@ -1,0 +1,18 @@
+[
+    {
+        "Userid": "john_day",
+        "Mobile": "+919876543210",
+        "Password": "john@123",
+        "Name": "John",
+        "Photo": "../public/assets/john.jpg",
+        "Email": "John@gmail.com"
+    },
+    {
+        "Userid": "sam_son",
+        "Mobile": "+919988776610",
+        "Password": "sam@123",
+        "Name": "Samson",
+        "Photo": "../public/assets/sam.jpg",
+        "Email": "Sam@gmail.com"
+    }
+]

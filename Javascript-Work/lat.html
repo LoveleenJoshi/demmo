@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script type="text/javascript">
+          function bodyLoad(){
+            pic.src="../public/assets/adv1.jpg";
+            frmRegister.btnRegister.value="Register";
+            frmEmail.btnEmail.value="Login";
+          }
+              
+       
+     </script>
+</head>
+<body onload="bodyLoad()">
+ <div >
+     <img width="200" height="200" name="pic">
+     <div>  
+          <form name="frmRegister">
+          <h2>Regsiter User</h2>
+        
+               <input type="text">
+              <input type="button" name="btnRegister">
+          </form>
+     </div>
+
+     <div> 
+           <form name="frmEmail">
+          <h2> User Email </h2>
+        
+               <input type="email">
+               <input type="button" name="btnEmail">
+          </form>
+     </div>
+ </div>
+</body>
+</html>

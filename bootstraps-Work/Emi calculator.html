@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Design</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+      input{
+        width: 160px;
+      }
+    </style>
+</head>
+  <body class="container-fluid">
+
+   <div class="m-2 p-3 alert alert-info alert-dismissible">
+    <h3 class="text-center">Personal Loan Emi calculator</h3>
+    <button class="btn btn-close" data-bs-dismiss="alert"></button>
+    <div class="row mt-4">
+      <div class="col">
+        Loan Amount
+      </div>
+      <div class="col">
+        Tenure(Months)
+      </div>
+      <div class="col">
+        Interest Rate (In Percentage)
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+      &#8377; 8,00,000
+      </div>
+      <div class="col">
+       72
+      </div>
+      <div class="col">
+       5
+      </div>
+    </div>
+
+
+    <div class="row mt-4">
+      <div class="col">
+     &#8377; 50,000 <input type="range" min="50000" max="50,00,000" value="50000"  size="24"> &#8377; 50,00,000
+      </div>
+      <div class="col">
+        12M <input type="range" min="12" max="72" value="12"  size="24" > 72M
+      </div>
+      <div class="col">
+       0%PA <input type="range" min="0" max="20" value="0" size="24"> 20%PA
+      </div>
+    </div>
+    <div class="row mt-4">
+    <div class="col text-center">
+      <button class="btn btn-info">Calculate</button>
+      <button class="btn btn-danger" data-bs-dismiss="alert">Cancel</button>
+    </div>
+    </div>
+   </div>
+      
+       
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

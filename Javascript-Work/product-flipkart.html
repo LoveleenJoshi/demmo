@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function bodyload() {
+            fetch("../data/product.json").then(function (response) {
+                return response.json()
+            })
+                .then(function (data) {
+                    document.getElementById("title").innerHTML = data.title;
+                    document.getElementById("pic").src = data.photo;
+                    document.getElementById("rating").innerHTML = `<span class="bi bi-star-fill text-success"></span> ${data.rating.rate}    ${data.rating.Ratings} Ratings & ${data.rating.Reviews} Reviews`;
+                    document.getElementById("price").innerHTML = "&#8377;" + data.price;
+
+                    for (var Offer of data.offer) {
+                        var li = document.createElement("li");
+                        li.className = "bi bi-tag text-success";
+                        li.innerHTML = Offer;
+                        document.getElementById("offers").appendChild(li);
+                    }
+                })
+
+        }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <div class="mt-4 row">
+        <div class="col-3">
+            <img id="pic" width="320" height="500">
+        </div>
+        <div class="col-9">
+            <div id="title"></div>
+            <div id="rating"></div>
+            <h3 id="price"></h3>
+            <div>
+                <ul id="offers" class="list-unstyled">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

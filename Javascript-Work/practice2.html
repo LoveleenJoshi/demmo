@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <script type="text/javascript">
+    function clrchange(){
+      var color=document.getElementById("clr").value;
+      document.getElementById("text").innerHTML=color.fontcolor(color);
+      document.getElementById("container").style.backgroundColor=color;
+    }
+  </script>
+</head>
+<body class="container-fluid">
+  <div class="w-100 d-flex justify-content-center align-items-center" style="height:800px" id="container">
+    <div class="border border-2 border-dark rounded w-50 p-4">
+      <dl>
+      <dt class="mb-2">select Color</dt>
+      <dd>
+        <input type="text" class="form-control-color w-100" onchange="clrchange()" id="clr">
+      </dd>
+      <dd>
+        <inpuy type="text" class="form-control" id="text">
+      </dd>
+    </dl></div>
+  </div>
+</body>
+</html>

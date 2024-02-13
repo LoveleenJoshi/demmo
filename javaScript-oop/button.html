@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Openpic() {
+            window.open("../public/assets/adv1.jpg", "asp", "width=400 ,height=400");
+        }
+        document.oncontextmenu = function () {
+            alert("Right click is not allowed");
+            return false;
+        }
+        document.onselectstart = function () {
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <img ondblclick="Openpic()" src="../public/assets/adv1.jpg" width="100" height="100">
+    <p>
+        Double click on image to view full screen
+    </p>
+    <p>Right is not allowed</p>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#home").click(function () {
+                $.ajax({
+                    method: "get",
+                    url: "../public/wedding.html",
+                    success: function (response) {
+                        $("main").html(response);
+                    }
+
+                })
+
+
+
+            })
+
+            $("#shop").click(function () {
+                $.ajax({
+                    method: "get",
+                    url: "../public/shopper-template.html",
+                    success: function (response) {
+                        $("main").html(response);
+                    }
+
+                })
+
+
+
+            })
+            $("#emi").click(function () {
+                $.ajax({
+                    method: "get",
+                    url: "../javascript-examples/Emi-Calculator.html",
+                    success: function (response) {
+                        $("main").html(response);
+                    }
+
+                })
+
+
+
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <nav>
+        <button id="home">Home</button>
+        <button id="shop">Shopper Template</button>
+        <button id="emi">Emi Calculator</button>
+    </nav>
+    <hr>
+    <hr>
+    <main>
+
+    </main>
+</body>
+
+</html>

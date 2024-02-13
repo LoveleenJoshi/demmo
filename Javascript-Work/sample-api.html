@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function bodyload() {
+            fetch("https://api.nasa.gov/DONKI/CME?startDate=2017-01-03&endDate=2017-01-03&api_key=DEMO_KEY")
+                .then(function (response) {
+                    return response.json()
+                })
+                .then(function (data) {
+                    data.map(function (item) {
+                        var div = document.createElement("div");
+                        div.className = "card m-4";
+                        div.style.width = "300px";
+                        div.innerHTML = `
+                   <div class="card-header">
+                    Note:  ${item.note}
+                    </div>
+                    <div class="card-body">
+                      <dl>
+                        <dt>Instruments</dt>
+                        <dd>${item.catalog}</dd>
+                       </dl>
+                        </div>
+                    `
+                        document.querySelector("main").appendChild(div);
+                    })
+                })
+        }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <main class="d-flex justify-content-center">
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        class HDFC_version1 {
+            Personal = "Personal Banking Services";
+            NRI = "NRL Banking Services";
+            print() {
+                document.write(`${this.Personal} <br>${this.NRI}<br>`);
+            }
+        }
+        class HDFC_version2 extends HDFC_version1 {
+            GOVt = "GOvt Banking Services";
+            print() {
+
+                super.print();
+                document.write(`${this.GOVt}<br>`);
+            }
+        }
+        class HDFC_version3 extends HDFC_version2 {
+            Loan = "Housing & Personal Loans Facility";
+            print() {
+
+                super.print();
+                document.write(`${this.Loan}<br>`);
+            }
+        }
+        function installClick() {
+            var ver = document.querySelector("select").value;
+            switch (ver) {
+                case "ver1":
+                    document.write("<h3>Version1 is Installing</h3> ");
+                    let obj1 = new HDFC_version1();
+                    obj1.print();
+                    break;
+                case "ver2":
+                    document.write("<h3>Version2 is Installing</h3> ");
+                    let obj2 = new HDFC_version2();
+                    obj2.print();
+                    break;
+                case "ver3":
+                    document.write("<h3>Version3 is Installing</h3> ");
+                    let obj3 = new HDFC_version3();
+                    obj3.print();
+                    break;
+                default:
+                    document.write("Please any of version");
+                    break;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body class="container-fluid">
+    <h3>Install HDFC Bank Latest Version</h3>
+    <select class="form-select w-25 mt-2">
+        <option value="ver1">HDFC_version1</option>
+        <option value="ver2">HDFC_version2</option>
+        <option value="ver3">HDFC_version3</option>
+
+    </select>
+    <button onclick="installClick()" class="btn btn-primary mt-4">Install</button>
+</body>
+
+</html>

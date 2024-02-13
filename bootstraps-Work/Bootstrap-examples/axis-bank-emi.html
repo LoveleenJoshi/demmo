@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body class="container-fluid justify-content-center align-items-center d-flex bg-dark" style="height: 750px;">
+    <div class="m-4 p-4 border border-light border-1 rounded rounded-1 alert-secondary alert alert-dismissible" style="width: 600px;">
+        <buttn class="btn-close" data-bs-dismiss="alert"></buttn>
+        <h3 class="text-center">Loan Calculator</h3>
+        <div class="row mb-4 mt-4">
+            <div class="col">
+                Loan Amount(&#8377;)
+            </div>
+            <div class="col">
+                <input type="text" value="1,75,000" size="20">
+            </div>
+
+        </div>
+
+        <div class="row row mb-4 mt-4">
+            <div class="col mb-4 mt-4">
+            <font color="#929190"> 50K  <input  type="range" min="50000" max="40,00,000" value="50,000" size="40" class="w-75 ms-2 me-2">  40L</font>
+            </div>
+        </div>
+
+
+        <div class="row mb-4 mt-4">
+            <div class="col">
+                Interest Rate(P.a)
+            </div>
+            <div class="col">
+               <input type="text" value="10.49%" size="20" >
+            </div>
+
+        </div>
+
+        <div class="row row mb-4 mt-4">
+            <div class="col mb-4 mt-4">
+            <font color="#929190"> 10.49% <input type="range" min="10.49" max="21" value="10.49%" size="40" class="w-75  ms-2 me-2">  21%</font>
+            </div>
+        </div>
+       
+
+
+
+
+
+        
+
+
+        <div class="row mb-4 mt-4">
+            <div class="col">
+               Tenure (Months)
+            </div>
+            <div class="col">
+               <input type="text" value="12" size="20" >
+            </div>
+
+        </div>
+
+        <div class="row row mb-4 mt-4">
+            <div class="col mb-4 mt-4">
+            <font color="#929190"> 12 <input type="range" min="12" max="60" value="12" size="40" class="w-75  ms-2 me-2">  60</font>
+            </div>
+
+            <div class="row mt-2 mb-2">
+                <div class="col  text-center">
+                    <button class="btn btn-primary ">Calculate</button>
+                    <button class="btn btn-outline-danger" data-bs-dismiss="alert">Cancel</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

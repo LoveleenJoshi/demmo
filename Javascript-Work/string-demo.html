@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function sizeChange(){
+            var siZe=document.getElementById("fontSize").value;
+            document.querySelector("p").innerHTML="Welcome To Javascript".fontsize(siZe);
+        }
+        function clrchange(){
+            var Color=document.getElementById("color").value;
+            document.querySelector("p").innerHTML="Welcome To Javascript".fontcolor(Color);
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Select Color</dt>
+        <dd>
+            <input type="color" id="color" onchange="clrchange()">
+        </dd>
+        <dt>Size  Change</dt>
+        <dd>
+            <select id="fontSize" onchange="sizeChange()">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+
+            </select>
+        </dd>
+    </dl>
+    <p align="center"></p>
+</body>
+</html>

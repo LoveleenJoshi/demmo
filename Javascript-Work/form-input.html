@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Input Variables</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        
+        function btnClick(){
+            document.getElementById("detailsContainer").style.display="block";
+            document.getElementById("registerContainer").style.display="none";
+            document.getElementById("lblName").innerHTML=document.getElementById("txtName").value;
+            document.getElementById("lblPrice").innerHTML=document.getElementById("txtPrice").value;
+            document.getElementById("lblCity").innerHTML=document.getElementById("lstCity").value;
+                stockStatus="";
+                 stockContainer =document.getElementById("stkOpt");
+               
+                 if(stockContainer.checked)
+                 {
+                   stockStatus="Available";
+                 }else
+                 {
+                    stockStatus="Out Of Stock";
+                 }
+                 document.getElementById("lblStock").innerHTML=stockStatus;
+        }
+        function editClick(){
+            document.getElementById("registerBtn").className="btn btn-success";
+            document.getElementById("registerBtn").innerHTML="save"; 
+            document.getElementById("closeBtn").style.display="none";
+          
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="mt-4" id="registerContainer">
+        <button class="btn btn-primary ps-4 pe-4" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#infoContainer" onclick="regClick()">Register Products</button>
+    </div>
+
+    <div class="modal fade" id="infoContainer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Products info:</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt class="mb-2">Name:</dt>
+                        <dd>
+                            <input type="text" class="form-control" id="txtName">
+                        </dd>
+                        <dt class="mb-2">Price:</dt>
+                        <dd>
+                            <input type="text" class="form-control" id="txtPrice">
+                        </dd>
+                        <dt class="mb-2">Shipped To:</dt>
+                        <dd>
+                            <select class="form-select" id="lstCity">
+                                <option>Select City</option>
+                                <option>Delhi</option>
+                                <option>Hyderabad</option>
+                                <option>Jaipur</option>
+                                <option>Pune</option>
+                                <option>Assam</option>
+                            </select>
+                        </dd>
+                        <dt class="mb-2">Stock</dt>
+                        <dd>
+                            <input type="checkbox" class="form-check-input" id="stkOpt"><label class="form-check-label">Available</label>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="btnClick()" data-bs-dismiss="modal" id="registerBtn">Register</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal" id="closeBtn">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div id="detailsContainer" class="mt-4 bg-dark text-white border border-light rounded w-25 p-4 mb-4" style="display: none;">
+        <h3>Product Information</h3>
+        <dl class="row">
+            <dt class="mt-4 col-6">Name</dt>
+            <dd id="lblName" class="col-6 mt-4"></dd>
+
+            <dt class="mt-4 col-6">Name</dt>
+            <dd id="lblPrice" class="col-6 mt-4"></dd>
+
+            <dt class="mt-4 col-6">Shipped To</dt>
+            <dd id="lblCity" class="col-6 mt-4"></dd>
+
+
+            <dt class="mt-4 col-6">stock</dt>
+            <dd id="lblStock" class="col-6 mt-4"></dd>
+        </dl>
+
+        <button class="btn btn-info" data-bs-target="#infoContainer" data-bs-toggle="modal" onclick="editClick()"><span class="bi bi-pen-fill"></span>Edit</button>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
+       
+   
+    
+        
+                           

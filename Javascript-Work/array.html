@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function bodyload(){
+            var Categories=["All" ,"Electronics" , "Footwear" , "Fashion" , "Women Fashion" , "Men Fashion"];
+           Categories.sort();
+           
+           
+         
+             Categories.map(function(items){
+                var li=document.createElement("li");
+                li.innerHTML=items;
+                document.querySelector("ol").appendChild(li);
+
+
+                var option=document.createElement("option");
+                option.text=items;
+                option.value=items;
+                document.querySelector("select").appendChild(option);
+
+                
+                var ulli=document.createElement("li");
+                var label=document.createElement("label");
+                var input=document.createElement("input");
+                input.type="checkbox";
+               
+                label.innerHTML=items;
+                ulli .appendChild(input);
+                ulli.appendChild(label);
+                document.querySelector("ul").appendChild(ulli);
+               
+                var tr=document.createElement("tr");
+                var td=document.createElement("td");
+                td.innerHTML=items;
+               
+                document.querySelector("tbody").appendChild(tr);
+                tr.appendChild(td);
+                
+
+             })
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+   <ol>
+
+   </ol>
+   <select>
+
+   </select>
+   <ul style="list-style: none;">
+
+   </ul>
+   <table width="200" border="1">
+    <thead>
+        <tr>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+   </table>
+    
+</body>
+</html>

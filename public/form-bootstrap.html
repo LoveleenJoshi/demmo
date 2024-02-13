@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>form with bootstrap design</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+    </style>
+
+</head>
+<body>
+    <form class="p-4 border border-3 border-dark roundrd rounded-3">
+        <h2>
+            <img src="assets/avatar1.jpg" width="50" height="50" class="rounded rounded-circle">
+            Register User</h2>
+        <div class="mb-3">
+            <label for="username" class="form-label">User Name</label>
+            <div>
+                <input type="text" name="username" class="form-control">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="password"  class="form-label">Password</label>
+            <div>
+                <input type="password" name="password" class="form-control">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="city"  class="form-label">Your City</label>
+            <div>
+               <select name="city" class="form-select">
+                <option>Choose your city</option>
+                <option>Delhi</option>
+                <option>Hyderabad</option>
+               </select>
+            </div>
+        </div>
+
+
+        <div>
+            <label for="price" class="form-label"> select Price</label>
+            <div class="mb-2">
+                <input type="range" name="price" min="1" max="1000" value="400" class="form-range">
+            </div>
+        </div>
+
+       <div >
+        <label for="subscribe" class="form-label">Subscribe</label>
+        <div class="form-switch">
+            <input type="checkbox" name="subscribe" class="form-check-input">
+            <label class="form-check-label">  I accept</label>
+        </div>
+       </div>
+
+      
+
+
+        <div class="mt-3 mb-2">
+            <button class="btn btn-primary  w-100">Register</button>
+            
+        </div>
+        <div >
+            <button class="btn btn-link w-100">Existing user? Login</button>
+        </div>
+    </form>
+    
+</body>
+</html>

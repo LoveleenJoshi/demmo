@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Object</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var Menu =
+            [{ Categories: "Electronics", Products: ["Mobile", "Television"] },
+            {
+                Categories: "Footwear", Products: ["Sneakers", "Boots"]
+            }]
+        function bodyload() {
+
+            Menu.map(function (product) {
+                var li = document.createElement("li");
+                li.innerHTML = product.Categories;
+
+                var optgroup = document.createElement("optgroup");
+                optgroup.label = product.Categories;
+                optgroup.className = "text-dark bg-light";
+
+
+                var Details = document.createElement("details");
+                var Summary = document.createElement("summary");
+                Summary.innerHTML = product.Categories;
+
+
+
+                product.Products.map(function (item) {
+                    var ul = document.createElement("ul");
+                    var ulli = document.createElement("li");
+                    ulli.innerHTML = item;
+                    ul.appendChild(ulli);
+                    li.appendChild(ul);
+                    document.querySelector("ol").appendChild(li);
+
+
+                    var option = document.createElement("option");
+                    option.innerHTML = item;
+                    optgroup.appendChild(option);
+                    document.querySelector("select").appendChild(optgroup);
+
+
+                    var Summarylist = document.createElement("ul");
+                    var SummarylistItems = document.createElement("li");
+                    SummarylistItems.innerHTML = item;
+                    Summarylist.appendChild(SummarylistItems);
+                    Details.appendChild(Summarylist);
+                    Details.appendChild(Summary);
+                    document.querySelector("nav").appendChild(Details)
+
+
+                })
+            })
+        }
+    </script>
+</head>
+
+<body onload="bodyload()">
+    <ol>
+
+    </ol>
+    <select>
+
+    </select>
+    <nav>
+
+    </nav>
+</body>
+
+</html>

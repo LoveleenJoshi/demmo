@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    nav{
+        display: flex;
+        border: 2px solid rgb(80, 79, 79);
+        margin: 20px;
+        padding: 10px;
+        justify-content: space-between;
+        font-size: 24px;
+    }
+    nav span{
+        margin-right: 10px;
+    }
+    .nav{
+        display: flex;
+        
+    }
+    .logo{
+        font-family: kanit;
+    }
+    .card{
+        width: 100px;
+        height: 100px;
+        border: none;
+        text-align: center;
+       
+    }
+    body{background-color: rgb(245, 248, 249);
+
+    }
+    main{
+        font-size: 10px;
+    }
+    .img{
+        margin-bottom: 4px;
+       
+    }
+    img{
+        box-shadow: 2px 2px 8px rgb(108, 108, 108);
+
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    @media screen and (orientation:landscape){
+        body{
+            display: grid;
+            grid-template-columns: 12fr;
+        }
+        nav{
+            grid-row: 1;
+           
+        }
+        main{
+            grid-row: 2;
+            
+        }
+        section{
+            grid-row: 3;
+           
+
+        }
+        
+    }
+    
+            @media screen and (orientation:portrait){
+                body{
+                    display: grid;
+                    grid-template-columns: 12fr;
+                }
+                nav{
+                    grid-row: 3;
+                }
+                main{
+                    grid-row: 1;
+                }
+                section{
+                    grid-row: 2;
+                }
+
+            }
+       
+
+  
+   
+</style>
+<body>
+    <nav>
+      
+        <div class="nav">
+            <span class="bi bi-justify"></span>
+          
+    
+            <div class="logo">Myntra</div></div>
+      
+        <div class="icons">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-person"></span>
+        </div>
+
+    </nav>
+    <main>
+        <div class="container">
+            <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img" style=" background-color: rgb(245, 248, 249);">
+                        <img src="assets/handbags.jpg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Handbags</div>
+                </div>
+
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/skirts.jpeg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Skirts</div>
+                </div>
+
+
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/sneakers.jpeg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Sneakerss</div>
+                </div>
+
+
+
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/handbags.jpg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Handbags</div>
+                </div>
+
+
+
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/decor.jpg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">decoration</div>
+                </div>
+
+
+
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/handbags.jpg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Handbags</div>
+                </div>
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/printed-shirt.jpeg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Shirts</div>
+                </div>
+
+
+
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/heels.jpeg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Heels</div>
+                </div>
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img" >
+                        <img src="assets/printed dress.jpeg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Dress</div>
+                </div>
+                <div class="card" style=" background-color: rgb(245, 248, 249);">
+                
+                    <div class="img">
+                        <img src="assets/handbags.jpg" width="70" height="70" class="rounded rounded-circle border border-2 border-dark">
+                    </div>
+                    <div class="label">Handbags</div>
+                </div>
+                
+
+
+           
+        </div>
+    </main>
+    <style>
+        section img{
+           margin: 10px 10px 10px 10px;
+           display: block;
+           
+        }
+        .material{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+    <section style="margin:20px 20px 20px 20px; display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+        <div class="material" >
+            <img src="assets/handbags.jpg" width="300" height="300" class="rounded rounded-4">Handbags
+
+        </div>
+        <div class="material">
+            <img src="assets/printed dress.jpeg" width="300" height="300" class="rounded rounded-4">Dress
+
+        </div>
+        <div class="material">
+            <img src="assets/printed-shirt.jpeg" width="300" height="300" class="rounded rounded-4">Shirts
+
+        </div>
+        <div class="material">
+            <img src="assets/heels.jpeg" width="300" height="300" class="rounded rounded-4">Heels
+
+        </div>
+        
+       
+
+
+        <div class="material">
+            <img src="assets/chopper.jpg" width="300" height="300" class="rounded rounded-4">Chopper
+
+        </div>
+        <div class="material">
+            <img src="assets/guitar.jpg" width="300" height="300" class="rounded rounded-4">Guitar
+
+        </div>
+        <div class="material">
+            <img src="assets/kids.jpeg" width="300" height="300" class="rounded rounded-4">Kids dress
+
+        </div>
+        <div class="material">
+            <img src="assets/dress.jpeg" width="300" height="300" class="rounded rounded-4">Maxi Dress
+
+        </div>
+
+
+    </section>
+    
+</body>
+</html>

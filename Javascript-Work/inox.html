@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox Ticket Booking</title>
+    
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+     function bookClick(){
+        document.getElementById("detailsContainer").style.display="block";
+        document.getElementById("bookingBtn").style.display="none";
+        document.getElementById("lblMovie").innerHTML=document.getElementById("selectMovie").value;
+        document.getElementById("lblCinema").innerHTML=document.getElementById("selectCinema").value;
+        document.getElementById("lblDate").innerHTML=document.getElementById("selectDate").value;
+        document.getElementById("lblTime").innerHTML=document.getElementById("selectTime").value;
+        document.getElementById("lblSeats").innerHTML=document.getElementById("selectSeats").value;
+           moviePoster=document.getElementById("poster");
+           film= document.getElementById("selectMovie").value;
+           if(film=="Fast X"){
+            moviePoster.src="../public/assets/fastX.jpg";
+           }
+           else{
+            moviePoster.src="../public/assets/Kerala.jpg";
+           }
+
+     }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="mt-4" id="bookingBtn">
+        <button class="btn btn-danger ps-4 pe-4" data-bs-toggle="modal" data-bs-target="#bookingInfo">Quick Booking</button>
+    </div>
+    <div  class="modal fade " id="bookingInfo">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h3>BOOKING INFO:</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <select class="form-select" id="selectMovie">
+                                <option>Select Movie</option>
+                                <option>Fast X</option>
+                                <option>Kerala Story</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select class="form-select" id="selectCinema">
+                                <option>Select Cinema</option>
+                                <option>Inox GVK Hills</option>
+                                <option>Amerpeet Inox</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="selectDate">
+                                <option>Select Date</option>
+                                <option>Today 20MAY</option>
+                                <option>SUNDAY 27MAy</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select class="form-select" id="selectTime">
+                                <option>Select Time</option>
+                                <option>10.20 A.M</option>
+                                <option>7.30 P.M</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select class="form-select" id="selectSeats">
+                                <option>Select Seats</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                       <div>
+                        <button class="btn btn-danger" data-bs-dismiss="modal" onclick="bookClick()">Book</button>
+                       </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="detailsContainer" class="w-25 border border-2 border-dark p-4 mt-4" style="display: none;">
+        <p class="bg-dark p-4 text-white rounded rounded-3 w-100 text-center">Movie  Info:</p>
+        <img id="poster" height="180" width="100%">
+           <dl class="row">
+            <dt class="col-6 mt-4">Movie</dt>
+            <dd id="lblMovie" class="col-6 mt-4"></dd>
+
+
+            <dt class="col-6 mt-4">Cinema</dt>
+            <dd id="lblCinema" class="col-6 mt-4"></dd>
+
+            <dt class="col-6 mt-4">Date</dt>
+            <dd id="lblDate" class="col-6 mt-4"></dd>
+
+            <dt class="col-6 mt-4">Time</dt>
+            <dd id="lblTime" class="col-6 mt-4"></dd>
+
+            <dt class="col-6 mt-4">Seats</dt>
+            <dd id="lblSeats" class="col-6 mt-4"></dd>
+        </dl>
+        <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#bookingInfo">Edit Booking</button>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

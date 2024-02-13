@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function OrderClick() {
+            document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+            document.getElementById("lblMobile").innerHTML = document.getElementById("txtMobile").value;
+            var menuItems = "";
+            var menuCost = 0;
+            var Burger = document.getElementById("optBurger");
+            var PavBaji = document.getElementById("optPavBaji");
+            var Chowmein = document.getElementById("optChowmein");
+            var Pizza = document.getElementById("optPizza");
+            if (Burger.checked) {
+                menuItems = `${Burger.value}`;
+                menuCost = 120;
+            }
+            if (PavBaji.checked) {
+                menuItems = `${Pizza.value}`;
+                menuCost = 220;
+
+            }
+            if (Chowmein.checked) {
+                menuItems = `${Chowmein.value}`;
+                menuCost = 180;
+            }
+            if (Pizza.checked) {
+                menuItems = `${Pizza.value}`;
+                menuCost = 150;
+            }
+            document.getElementById("lblMenu").innerHTML = menuItems;
+            var addonItems = "";
+            var addonCost = 0;
+            var ColdCoffee = document.getElementById("optColdCoffee");
+            var HotWings = document.getElementById("optHotWings");
+            var Browine = document.getElementById("optBrowine");
+            if (ColdCoffee.checked) {
+                addonItems = `${ColdCoffee.value}`;
+                addonCost = 60;
+                menuCost += addonCost;
+            }
+            if (HotWings.checked) {
+                addonItems = `${HotWings.value}`;
+                addonCost = 90;
+                menuCost += addonCost;
+            }
+            if (Browine.checked) {
+                addonItems = `${Browine.value}`;
+                addonCost = 80;
+                menuCost += addonCost;
+            }
+            document.getElementById("lblAddons").innerHTML = addonItems;
+            document.getElementById("lblTotal").innerHTML = `Total Bill=${menuCost}`
+
+
+
+
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <header class="m-2 p-3 border border-2 bg-opacity-25 rounded border-danger">
+        <img src="../public/assets/Banner2.jpg" width="100%" height="300" class="rounded">
+    </header>
+
+
+
+    <section class="mt-4">
+        <div class="accordion" id="Order">
+            <div class="accordion-item">
+                <div class="accordion-header" style="box-shadow: 1px 1px 10px rgb(125, 125, 125);">
+                    <button class="btn btn-danger w-100" data-bs-toggle="collapse" data-bs-target="#Customer">Customer
+                        Details</button>
+                </div>
+
+                <div class="accordion-collapse collapse show" data-bs-parent="#Order" id="Customer">
+                    <div class="accordion-body bg-secondary bg-opacity-25 mt-2 rounded">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd>
+                                <input type="text" class="form-control" id="txtName" placeholder="Enter Name">
+                            </dd>
+
+                            <dt>Mobile No.</dt>
+                            <dd>
+                                <input type="text" class="form-control" id="txtMobile" placeholder="Enter Mobile No.">
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="accordion-item">
+                <div class="accordion-header" style="box-shadow: 1px 1px 10px rgb(125, 125, 125);">
+                    <button class="btn btn-danger w-100 mt-4" data-bs-target="#Menu" data-bs-toggle="collapse">Select
+                        Menu</button>
+
+                </div>
+                <div class="accordion-collapse collapse" id="Menu" data-bs-parent="#Order">
+                    <div class="accordion-body bg-secondary bg-opacity-10">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card m-2 p-4">
+                                    <img src="../public/assets/Burger.jpg" width="100%" height="200"
+                                        class="card-img-top">
+                                    <div class="card-header fw-bold fs-3 text-center text-secondary text-opacity-75">
+                                        Burger</div>
+                                    <div class="card-footer text-center">
+                                        <input type="radio" id="optBurger" value="Burger" name="menu"
+                                            class="form-check-input"><label
+                                            class="ms-2 form-check-label fw-semibold text-primary">&#8377;
+                                            120</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card m-2 p-4">
+                                    <img src="../public/assets/Pavbaji.jpg" width="100%" height="200"
+                                        class="card-img-top">
+                                    <div class="card-header fw-bold fs-3 text-center text-secondary text-opacity-75">
+                                        PavBaji</div>
+                                    <div class="card-footer text-center">
+                                        <input type="radio" id="optPavBaji" value="PavBaji" name="menu"
+                                            class="form-check-input"><label
+                                            class="ms-2 form-check-label fw-semibold text-primary">&#8377;
+                                            220</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="card m-2 p-4">
+                                    <img src="../public/assets/Chowmein.jpg" width="100%" height="200"
+                                        class="card-img-top">
+                                    <div class="card-header fw-bold fs-3 text-center text-secondary text-opacity-75">
+                                        Chowmein</div>
+                                    <div class="card-footer text-center">
+                                        <input type="radio" id="optChowmein" value="Chowmein" name="menu"
+                                            class="form-check-input"><label
+                                            class="ms-2 form-check-label fw-semibold text-primary">&#8377;
+                                            180</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="card m-2 p-4">
+                                    <img src="../public/assets/Pizza.jpg" width="100%" height="200"
+                                        class="card-img-top">
+                                    <div class="card-header fw-bold fs-3 text-center text-secondary text-opacity-75">
+                                        Pizza</div>
+                                    <div class="card-footer text-center">
+                                        <input type="radio" id="optPizza" value="Pizza" name="menu"
+                                            class="form-check-input"><label
+                                            class="ms-2 form-check-label fw-semibold text-primary">&#8377;
+                                            150</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="btn btn-danger w-100 mt-4" data-bs-toggle="collapse" data-bs-target="#Addon"
+                        style="box-shadow: 1px 1px 10px rgb(125, 125, 125);">Select
+                        Addons</button>
+
+                </div>
+                <div class="accordion-collapse collapse" id="Addon" data-bs-parent="#Order">
+                    <div class="accordion-body bg-secondary bg-opacity-10">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card m-2 p-4">
+                                    <img src="../public/assets/Coldcoffee.jog.png" width="100%" height="200"
+                                        class="card-img-top">
+                                    <div class="card-header fw-bold fs-3 text-center text-secondary text-opacity-75">
+                                        Cold Coffee</div>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" id="optColdCoffee" value="ColdCoffee" name="menu"
+                                            class="form-check-input"><label
+                                            class="ms-2 form-check-label fw-semibold text-primary">&#8377;
+                                            60</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="card m-2 p-4">
+                                    <img src="../public/assets/Hotwings.jpg" width="100%" height="200"
+                                        class="card-img-top">
+                                    <div class="card-header fw-bold fs-3 text-center text-secondary text-opacity-75">
+                                        Hot Wings</div>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" id="optHotWings" value="HotWings" name="menu"
+                                            class="form-check-input"><label
+                                            class="ms-2 form-check-label fw-semibold text-primary">&#8377;
+                                            90</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="col">
+                                <div class="card m-2 p-4">
+                                    <img src="../public/assets/Brownie.jpg" width="100%" height="200"
+                                        class="card-img-top">
+                                    <div class="card-header fw-bold fs-3 text-center text-secondary text-opacity-75">
+                                        Browine</div>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" id="optBrowine" value="Browine" name="menu"
+                                            class="form-check-input"><label
+                                            class="ms-2 form-check-label fw-semibold text-primary">&#8377;
+                                            80</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="OrderClick()" data-bs-toggle="modal" data-bs-target="#billSummary"
+            class="btn btn-danger w-100 mt-4" style="box-shadow: 1px 1px 10px rgb(125, 125, 125);">View and Place
+            Order</button>
+        <div class="modal fade" id="billSummary">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Cart Summary</h3>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd id="lblName"></dd>
+                            <dt>Mobile No.</dt>
+                            <dd id="lblMobile"></dd>
+                            <dt>Menu Items</dt>
+                            <dd id="lblMenu"></dd>
+                            <dt>Addons</dt>
+                            <dd id="lblAddons"></dd>
+                            <dt>Total</dt>
+                            <dd id="lblTotal"></dd>
+
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

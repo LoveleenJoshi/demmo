@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $.ajax({
+                    method: "get",
+                    url: "http://fakestoreapi.com/products",
+                    success: function (products) {
+                        products.map(function (product) {
+                            $(`<tr>
+                                <td>${product.title}</td>
+                                <td><img src="${product.image}" width="100" height="100"></td>
+                                <td>${product.price}</td> 
+                                <td>${product.rating.rate}</td>
+  
+
+
+
+                                </tr>
+                            
+                            
+                            
+                            
+                            `).appendTo("tbody")
+
+                        })
+
+                    }
+
+                })
+
+
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <button>Load FakeStore Products</button>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Preview</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>

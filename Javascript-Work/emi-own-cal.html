@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+    </style>
+    <script type="text/javascript">
+   function amtChange(){
+    document.getElementById("txtAmount").value=document.getElementById("lAmount").value;
+   }
+   function yearChange(){
+    document.getElementById("txtYears").value=document.getElementById("lYears").value;
+   }
+   function rateChange(){
+    document.getElementById("txtRate").value=document.getElementById("lRate").value;
+   }
+   function calculateClick(){
+    var p=parseInt(document.getElementById("txtAmount").value);
+    var n=parseInt(document.getElementById("txtYears").value)*12;
+    var r=parseFloat(document.getElementById("txtRate").value)/12/100;
+    var Emi=p*r*Math.pow((1+r),n)/Math.pow((1+r),n)-1;
+    document.getElementById("msg").innerHTML="Your Monthly Installment =" + Math.round( Emi);
+   }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="mt-4 alert alert-warning alert-dismissible">
+        <h3 class="text-center">Personal Loan Calculator</h3>
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+        <div class="row mt-4 p-4">
+            <div class="col mt-3">
+                Amount You Need   <input type="text" id="txtAmount"  size="20">
+            </div>
+            <div class="col mt-3">
+                For   <input type="text" id="txtYears" size="10">   Years
+            </div>
+
+            <div class="col mt-3">
+                Interest Rate  <input type="text" id="txtRate" size="10">   %
+            </div>
+        </div>
+
+        <div class="row mt-4 p-4">
+            <div class="col mt-3">
+          &#8377;  50,000    <input type="range" min="50000" max="1050000" value="50000" id="lAmount" step="100" class="form-range w-50" onchange="amtChange()">  &#8377;10,50,000
+            </div>
+            <div class="col mt-3">
+                1   <input type="range" min="1" max="5" value="1" id="lYears" class="form-range w-50" onchange="yearChange()"> 5
+                  </div>
+             <div class="col mt-3">
+                10.5%   <input type="range" min="10.5" max="21" value="10.5" id="lRate" step="0.01" class="form-range w-50" onchange="rateChange()"> 21%
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col text-end">
+                <button class="btn btn-primary" onclick="calculateClick()">Calculate</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" data-bs-dismiss="alert">Close</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col mt-3">
+                <p id="msg"></p>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

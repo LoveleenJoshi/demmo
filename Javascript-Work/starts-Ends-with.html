@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <script type="text/javascript">
+       function VerifyCard(){
+        var Pic=document.getElementById("pic");
+        var Card=document.getElementById("card").value;
+        if(Card.startsWith("4455")){
+            Pic.src="../public/assets/visa.jpg";
+        }
+        else{
+            Pic.src="../public/assets/MasterCard.jpg";
+        }
+       }
+       function VerifySkype(){
+        var Skype=document.getElementById("skype").value;
+        var SkypeError=document.getElementById("skypeError");
+        if(Skype.endsWith("outlook.com")){
+            SkypeError.innerHTML = "";
+        }
+        else{
+            SkypeError.innerHTML = "Invalid Skype id".fontcolor('red');
+        }
+       }
+    </script>
+</head>
+<body>
+    <dl class="m-4 w-50">
+        <dt class="mt-4">
+           Enter Card Number
+        </dt>
+        <dd class="input-group"> <input type="text" id="card" onblur="VerifyCard()" class="form-control">
+            <img id="pic" width="90" class="input-group-text">
+        </dd>
+
+        <dt>Enter <span class="bi bi-skype"></span>  id</dt>
+        <dd>
+            <input type="text" id="skype" class="form-control" onblur="VerifySkype()">
+        </dd>
+        <dd id="skypeError"></dd>
+    </dl>
+</body>
+</html>

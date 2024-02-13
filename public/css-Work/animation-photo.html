@@ -1,0 +1,61 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 500px;
+                background-color:black;
+            }
+            @keyframes heart{
+                from{
+                    font-size: 20px;
+                    opacity: 0.2;
+                    color: red;
+                }
+                30%{
+                    font-size: 40px;
+                    opacity: 0.4;
+                    color: red;
+                }
+                50%{
+                    font-size: 60px;
+                    opacity: 0.7;
+                    color: red;
+                }
+                70%{
+                    font-size: 40px;
+                    opacity: 0.4;
+                    color: red;
+                }
+                to{
+                    font-size: 20px;
+                    opacity: 0.2;
+                    color: rgb(152, 15, 15);
+                }
+            }
+            .bi-heart-fill{
+                animation-name: heart;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
+                animation-direction: alternate;
+                animation-iteration-count: infinite ;
+            }
+        </style>
+    </head>
+    <body>
+       
+            <span class="bi bi-heart-fill"></span>
+        
+        
+      
+    </body>
+    </html>

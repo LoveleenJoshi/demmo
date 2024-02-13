@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Cities</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        var Cities = ["Delhi", "Mumbai", "Pune"];
+        function loadCities() {
+
+            document.getElementById("lstCities").innerHTML = "";
+            for (var City of Cities) {
+                var option = document.createElement("option");
+                option.text = City.toUpperCase();
+                option.value = City.toUpperCase();
+                document.getElementById("lstCities").appendChild(option);
+            }
+            document.getElementById("txtCount").innerHTML = `Total number Of Cities is: ${Cities.length}`
+        }
+        function bodyload() {
+            loadCities();
+        }
+        function addClick() {
+
+            var lblCities = document.getElementById("lblCities").value;
+            if (Cities.indexOf(lblCities) == -1) {
+                alert(`${lblCities} is added to list`);
+                Cities.push(lblCities);
+
+                loadCities();
+                document.getElementById("lblCities").value = "";
+
+            } else {
+                alert(`${lblCities} is already Existing in List`);
+                document.getElementById("lblCities").value = "";
+            }
+
+
+        }
+        function AscClick() {
+            Cities.sort();
+            loadCities();
+        }
+        function DescClick() {
+            Cities.sort();
+            Cities.reverse();
+            loadCities();
+        }
+        function removeClick() {
+            var CityName = document.getElementById("lstCities").value;
+            var CityNamepos = Cities.indexOf(CityName);
+            alert(`Are You Sure?\n you want to Delete ${CityName}`);
+            Cities.splice(CityNamepos, 1);
+            loadCities();
+        }
+        function clearClick() {
+            alert(`Are you sure you want to Delete?`);
+            Cities.length = 0;
+            loadCities()
+
+
+        }
+        function searchClick() {
+            var searchCities = document.getElementById("searchCities").value;
+            if (Cities.indexOf(searchCities) == -1) {
+                alert(`${searchCities} doesn't Exists`)
+
+            } else {
+                searchCities.value
+            }
+        }
+
+
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <div class="d-flex justify-content-center align-items-center" style="height:600px">
+        <div class="bg-dark p-4 m-4 rounded">
+
+            <div class="mt-4">
+                <label class="form-label text-white">Search Cities</label>
+                <div class="input-group">
+                    <input type="text" id="searchCities" class="form-control"><button class="btn btn-success"
+                        onclick="searchClick()">Search</button>
+                </div>
+            </div>
+
+
+
+            <div class="mt-4">
+                <label class="form-label text-white">Add Cities</label>
+                <div class="input-group">
+                    <input type="text" id="lblCities" class="form-control"><button onclick="addClick()"
+                        class="btn btn-warning">Add</button>
+                </div>
+
+            </div>
+
+            <div class="my-4">
+                <button class="btn btn-success" onclick="AscClick()"><span
+                        class="bi bi-sort-alpha-down"></span></button>
+                <button class="btn btn-success" onclick="DescClick()"><span class="bi bi-sort-alpha-up"></span></button>
+            </div>
+
+            <div class="mt-4">
+                <label class="form-label text-white">List Of Cities</label>
+                <div>
+                    <select class="form-select" id="lstCities">
+
+                    </select>
+                </div>
+                <label id="txtCount" class="form-label text-white mt-4"></label>
+            </div>
+
+            <div class="mt-4">
+                <button class="btn btn-danger" onclick="removeClick()"><span class="bi bi-trash-fill"></span>Remove
+                    City</button>
+                <button class="btn btn-outline-danger" onclick="clearClick()"><span
+                        class="bi bi-trash-fill"></span>Clear All Cities</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

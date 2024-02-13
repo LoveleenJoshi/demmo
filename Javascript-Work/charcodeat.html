@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function verifyEmail(){
+            var UserEmail=document.getElementById("userEmail").value;
+            var EmailError=document.getElementById("emailError");
+            if(UserEmail.indexOf("@")==-1)
+            {
+                EmailError.innerHTML="Please include @ in Email".fontcolor('red');
+
+            }
+            else{
+                if(UserEmail.indexOf("@")<4){
+                    EmailError.innerHTML="Invalid Email".fontcolor('red');
+                }else{
+                    EmailError.innerHTML="";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Email</dt>
+        <dd>
+            <input type="text" id="userEmail" onblur="verifyEmail()">
+        </dd>
+        <dd id="emailError"></dd>
+    </dl>
+</body>
+</html>

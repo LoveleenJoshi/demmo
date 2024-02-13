@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-pannel div {
+            width: 200px;
+            height: 60px;
+        }
+
+        .color-pannel {
+            display: flex;
+        }
+    </style>
+    <script>
+        function getcolor(color) {
+            document.querySelector("h1").style.color = color;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="color-pannel">
+        <div class="red-pannel" style="background-color: red;" onmouseover="getcolor('red')">
+
+        </div>
+        <div class="green-pannel" style="background-color: rgb(15, 216, 21);" onmouseover="getcolor('green')">
+
+        </div>
+        <div class="blue-pannel" style="background-color: rgb(32, 50, 217);" onmouseover="getcolor('blue')">
+
+        </div>
+    </div>
+    <h1 align="center">Sample text</h1>
+</body>
+
+</html>

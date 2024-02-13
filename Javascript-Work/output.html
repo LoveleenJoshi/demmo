@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function deleteclick(){
+          console.warn("Delete Button Clicked");
+         val=confirm("Delete Record\n Are you sure you want to Delete?");
+         if (val==true){
+           document.querySelector("p").outerHTML="<h2><i>Records are Deleted</i></h2>";
+           console.error("Ok Button Clicked");
+         }
+          else
+          { 
+            document.querySelector("p").innerText="You Canceled....";
+            console.ok("Canceled");
+          }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="deleteclick()">Delete</button>
+    <p align="center"></p>
+</body>
+</html>

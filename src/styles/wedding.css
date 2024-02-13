@@ -1,0 +1,119 @@
+body{
+    background-image: linear-gradient(to bottom right,#feb1dd,#d3a6eb);
+    height: 800px;
+}
+nav{
+    border: 2px solid white;
+    margin: 20px 0px 0px 240px;
+  
+    width: 960px;
+    align-items: center;
+    padding: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 2px 2px 8px gray;
+}
+span{
+    padding-right:60px;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 40px;
+  
+}
+nav span{
+    text-align: center;
+}
+.card{
+    width: 560px;
+    height: 340px;
+    background-image:linear-gradient(to bottom right,#feb1dd ,#dba8f1) ;
+    margin: 100px 0px 0px 140px;
+    border: unset;
+}
+aside{
+    font-size: 28px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 8px;
+    border: 2px solid white;
+    width:50px;
+    height: 200px;
+    position:fixed; 
+    bottom: 60px;
+    right: 60px;  
+    text-align: center;
+    color: #cc1a7f;
+}
+aside div:hover{
+    color: #9211d8;
+}
+
+
+
+.card-subtitle{
+    font-size: 28px;
+    font-family: brushscriptmt;
+    margin-bottom: 8px;
+}
+.card-title{
+    font-size: 68px;
+    font-family: brushscriptmt;
+    margin-bottom: 8px;
+    
+
+}
+.card-body{
+    font-size: 18px;
+    font-family: arial;
+    margin-left: -28px;
+}
+  
+button{
+    width: 140px;
+    margin-right: 20px;
+    background-image: linear-gradient(to top right,#D067F7,#FB8BCB);
+}
+.img{
+    position: absolute;
+    right: 140px;
+    top:200px;
+}
+section .card{
+    margin-left: 120px;
+}
+.Adver1{
+    border: 3px double white;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    padding: 5px;
+    display: flex;
+
+}
+.Adver2{
+    border: 3px double white;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    padding: 5px;
+    display: flex;
+
+}
+.Adver3{
+    border: 3px double white;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    padding: 5px;
+    display: flex;
+
+}
+.advert{
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+    margin-top: 140px;
+    text-align: center;
+    
+}

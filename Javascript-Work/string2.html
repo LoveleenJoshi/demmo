@@ -1,0 +1,16 @@
+<script>
+    var title=prompt("Enter Your Title");
+    var userLAbel=prompt("Enter your LAbel");
+    var userTxt=prompt("Enter user input","Text|email|password");
+    var btnText=prompt("Enter Button Text");
+    var login = `
+     <h3>${title}</h3>
+     <dl>
+        <dt>${userLAbel}</dt>
+        <dd><input type=${userTxt}</dd>
+        </dl>
+        <button>${btnText}</button>
+
+      `
+      document.write(login);
+</script>

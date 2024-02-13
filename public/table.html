@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+   
+</head>
+<body class="p-4 m-4">
+    <h2>
+        Amazon Search
+    </h2>
+    <div class="input-group input-group-lg">
+        <select name="category" class=" input-group-text">
+            <option>All</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+            <option>Shoes</option>
+        </select>
+
+        <input type="text" name="search-bar" class="form-control">
+
+        <button class="btn btn-warning">
+            <span class="bi bi-search"></span>
+        </button>
+    </div>
+
+
+
+    <h3>Netflix Email</h3>
+    <div class="input-group input-group-lg p-4 bg-black rounded rounded-4 border border-2 border-danger">
+        <input type="email" name="email" class="form-control">
+        <button class="btn btn-danger">Get Started
+            <span class="bi bi-chevron-bar-right"></span>
+        </button>
+    </div>
+
+
+    <h3>Price</h3>
+    <div class="input-group">
+        <span class="input-group-text">&#8377;</span>
+        <input type="text" name="amount" class="form-control">
+        <span class="input-group-text">.00</span>
+
+    </div>
+    <h3>CART</h3>
+    <button class="position-relative btn btn-primary">
+        <span class="bi bi-cart4"></span>
+        <span class="badge bg-danger position-absolute rounded-circle">3</span>
+    </button>
+    
+</body>
+</html>

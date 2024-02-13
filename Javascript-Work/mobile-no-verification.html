@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        regExp = /  /;
+        var flag = " ";
+        var tip = " ";
+        function SetValidation(pattern,flag,tip){
+            regExp=pattern;
+            document.getElementById("flag1").src=flag;
+            document.getElementById("flag2").src=flag;
+            document.getElementById("txtMobile").placeholder=tip;
+        }
+         function CountryChanged(){
+            var CountryName=document.getElementById("lstCountry").value;
+            if(CountryName=="India"){
+                SetValidation(/\+91\d{10}/ , "../public/assets/india.jpg" , "Mobile no. +91 and 10 digits.");
+            } else if(CountryName=="Usa"){
+                SetValidation(/\+\(1\)\(\d{3}\)\s\d{4}\s\d{4}/ , "../public/assets/usa.jpg" , "Us Mobile: +(1) (450) 3245 5673");
+            } else if(CountryName=="UK"){
+                SetValidation(/\+\(44\)\(\d{3}\)\s\d{4}-\d{4}/ , "../public/assets/uk.jpg" , "Uk Mobile: +(44) (450) 1234-7624");
+            } else{
+                SetValidation(/ / ,'  ', "Please select your Country");
+            }
+         }
+         function submitClick(){
+            var Value=document.getElementById("txtMobile").value;
+            if(Value.match(regExp)){
+                document.write(`<h2>Mobile Registered successfully</h2>`);
+            }else{
+                document.querySelector("p").innerHTML=`Invalid Mobile Format - ${document.getElementById("txtMobile").placeholder}`;
+            }
+         }
+    </script>
+</head>
+<body class="container-fluid">
+    <h3>Verify Mobile Number</h3>
+    <dl class="w-50">
+        <dt>Select Country</dt>
+        <dd class="input-group">
+            <span class="input-group-text"><img id=flag1 width="60" height="40"></span>
+            <select class="form-select" id="lstCountry" onchange="CountryChanged()">
+                <option>Choose any one</option>
+                <option>India</option>
+                <option>Usa</option>
+                <option>UK</option>
+            </select>
+        </dd>
+        <dt>Mobile NO.</dt>
+        <dd class="input-group">
+             <span class="input-group-text"><img id="flag2" width="60" height="40"></span>
+            <input type="text" id="txtMobile" class="form-control">
+        </dd>
+    </dl>
+    <button class="btn btn-primary" onclick="submitClick()">Submit</button>
+    <p align="center"></p>
+</body>
+</html>

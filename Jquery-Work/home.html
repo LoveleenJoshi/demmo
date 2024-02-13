@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#btnRegister").click(function () {
+
+                $("#lblName").text($("#name").val());
+                $("#lblPrice").text($("#price").val());
+                $("#lblCity").text($("#city").val());
+                $("#lblStock").text(`${($("#stock").prop("checked")) ? "Available" : "Out Of Stock"}`);
+
+            })
+
+        })
+    </script>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            column-gap: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <nav>
+            <h2>New Product</h2>
+            <dl>
+                <dt>Product Name</dt>
+                <dd><input type="text" id="name"></dd>
+                <dt>Price</dt>
+                <dd>
+                    <input type="number" id="price">
+                </dd>
+                <dt>City</dt>
+                <dd>
+                    <select id="city">
+                        <option>Select City</option>
+                        <option>Delhi</option>
+                        <option>Hyd</option>
+                        <option>Pune</option>
+                    </select>
+                </dd>
+                <dt>Stock</dt>
+                <dd>
+                    <input type="checkbox" id="stock"><label>Available</label>
+                </dd>
+            </dl>
+            <button id="btnRegister"> Register</button>
+
+        </nav>
+        <main>
+            <h2> New Product Details:</h2>
+            <dl>
+                <dt>Product Name</dt>
+                <dd id="lblName"></dd>
+                <dt>Price</dt>
+                <dd id="lblPrice"></dd>
+                <dt>City</dt>
+                <dd id="lblCity"></dd>
+                <dt>Stock</dt>
+                <dd id="lblStock">
+
+                </dd>
+            </dl>
+
+        </main>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities-Manipulations</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        var Cities = ["Delhi", "Mumbai", "HYD", "Chennai"]
+        function loadCities() {
+            document.getElementById("lstCities").innerHTML = "";
+            for (var city of Cities) {
+                var option = document.createElement("option");
+                option.text = city;
+                option.value = city;
+                document.getElementById("lstCities").appendChild(option);
+            }
+            document.getElementById("status").innerHTML = `Total no. of Cities:${Cities.length}`;
+        }
+        function bodyload() {
+            loadCities();
+        }
+        function AddClick() {
+            var CityName = document.getElementById("txtCity").value;
+
+            if (Cities.indexOf(CityName) == -1) {
+                Cities.push(CityName);
+                alert(`${CityName} Added to CityList`);
+
+                loadCities();
+                document.getElementById("txtCity").value = " ";
+            }
+            else {
+                alert(`${CityName} Already Exists`);
+            }
+        }
+        function sortAsc() {
+            Cities.sort();
+            loadCities();
+        }
+        function sortDesc() {
+            Cities.sort();
+            Cities.reverse();
+            loadCities();
+        }
+        function removeClick() {
+            var selectCityName = document.getElementById("lstCities").value;
+            var Indexnumber = Cities.indexOf(selectCityName);
+            var value = confirm(`Delete ${selectCityName}\nAre you Sure`);
+            if (value == true) {
+                Cities.splice(Indexnumber, 1)
+                loadCities();
+            }
+        }
+        function clearClick() {
+            var flag = confirm("Are You Sure You want to Delete All cities");
+            if (flag == true);
+            Cities.length = 0;
+            loadCities();
+        }
+        function searchClick() {
+            var Searchtxt = document.getElementById("searchtxt");
+            if (Cities.indexOf(Searchtxt.value) == -1) {
+                alert(`${Searchtxt.value} is not found`);
+                Cities.push(Searchtxt.value);
+                loadCities();
+                document.getElementById("searchtxt").value = "";
+            } else {
+                alert(`${Searchtxt.value} already Exists`);
+
+            }
+        }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <div class="mt-3 w-25 bg-dark text-white m-3 p-3">
+        <div class="mt-3 mb-3 input-group">
+            <input type="text" class="form-control" id="searchtxt">
+            <button class="btn btn-info" onclick="searchClick()">
+                <span class="bi bi-search"></span>
+            </button>
+        </div>
+        <div>
+            <label class="form-label fw-bold">New City</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="txtCity">
+                <button class="btn btn-warning" onclick="AddClick()">Add</button>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <button class="btn btn-success" onclick="sortAsc()">
+                <span class="bi bi-sort-alpha-down"></span>
+            </button>
+            <button class="btn btn-success" onclick="sortDesc()">
+                <span class="bi bi-sort-alpha-up"></span>
+            </button>
+        </div>
+
+        <div classs="mt-4">
+            <label class="form-label fw-bold mt-3 mb-3">Cities list</label>
+            <select class="form-select" size="3" id="lstCities">
+
+            </select>
+            <div class="mt-3">
+                <label id="status" class="text-warning"></label>
+            </div>
+        </div>
+
+
+        <div class="mt-4 justify-content-evenly d-flex">
+            <button class="btn btn-danger" onclick="removeClick()">
+                <span class="bi bi-trash-fill"></span>Remove City
+            </button>
+            <button class="btn btn-danger" onclick="clearClick()">
+                <span class="bi bi-trash-fill"></span>Clear Cities
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

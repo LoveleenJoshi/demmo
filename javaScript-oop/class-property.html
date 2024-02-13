@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    var name = prompt("Enter Username");
+    var role = prompt("Enter your role", "Admin | Customer");
+    var productname = prompt("Enter product name");
+    class product {
+        _productname;
+        get ProductName() {
+            return this._productname;
+        }
+        set ProductName(newname) {
+
+            this._productname = newname
+
+        }
+    }
+
+
+    let obj = new product;
+    obj.ProductName = productname;
+    if (obj.ProductName) {
+        document.write(`Product name=${obj.ProductName}`);
+    }
+</script>

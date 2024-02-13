@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        class btn {
+            constructor(db) {
+                document.write(`<h1>  Connecting to ${db} ...... <br></h1>`)
+            }
+            Insert() {
+                document.write(`Record Inserted <br>`);
+            }
+            Update() {
+                document.write(`Record Updated </b>`);
+            }
+            Delete() {
+                document.write(`Record Deleted <br>`);
+            }
+        }
+        function insertClick() {
+            let obj = new btn(document.querySelector("select").value);
+            obj.Insert();
+        }
+        function updateclick() {
+            let obj = new btn(document.querySelector("select").value);
+            obj.Update();
+        }
+        function deleteclick() {
+            let obj = new btn(document.querySelector("select").value);
+            obj.Delete();
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <div class="d-flex">
+        <select class="form-select w-25 me-4">
+            <option>Oracle</option>
+            <option>My SQL</option>
+            <option>MongoDB</option>
+        </select>
+        <button onclick="insertClick()" class="btn btn-primary btn-lg me-4">Insert</button>
+        <button onclick="updateclick()" class="btn btn-secondary btn-lg me-4">Update</button>
+        <button onclick="deleteclick()" class="btn btn-danger btn-lg me-4">Delete</button>
+
+    </div>
+</body>
+
+</html>

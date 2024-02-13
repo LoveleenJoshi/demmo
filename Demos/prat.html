@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakestore-Uniary Operator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function loadProducts(id) {
+            fetch(`http://fakestoreapi.com/products/${id}`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (product) {
+                    document.getElementById("title").innerHTML = product.title;
+                    document.getElementById("price").innerHTML = product.price;
+                    document.querySelector("img").src = product.image;
+                })
+        }
+        function bodyload() {
+            loadProducts(1)
+        }
+        var count = 1;
+        function nextClick() {
+            count++;
+            loadProducts(count);
+        }
+        function prevClick() {
+            count--;
+            loadProducts(count);
+        }
+
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <div class="d-flex justify-content-center mt-4">
+        <div class="card mt-2 w-50">
+            <div class="card-header text-center">
+                <p id="title"></p>
+            </div>
+            <div class="card-body position-relative">
+                <div id="price"
+                    style="position:absolute; top:10px; right:4px; width: 80px; height: 80px; padding: 10px; background-color: bisque;"
+                    class="text-center rounded rounded-circle fw-bolder">
+
+                </div>
+                <img id="poster" class="rounded border border-3 border-primary" width="100%" height="400">
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button class="btn btn-danger" onclick="prevClick()">
+                    <span class="bi bi-chevron-left"></span>
+                </button>
+                <button class="btn btn-danger" onclick="nextClick()">
+                    <span class="bi bi-chevron-right"></span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
